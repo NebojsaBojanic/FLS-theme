@@ -1,0 +1,186 @@
+/* DOCUMENT INFORMATION
+    
+    - Document: FLS Theme 
+    - Version:  v1.0
+    - Client:   Roster
+    - Author:   Strahinja Djukic
+    - Date:     21/06/18
+    - Development: Custom
+
+    COLORS
+    - default body text  #000
+    - headings h1,h2,h3,h4,h5,h6 text #000
+    - default p text     #000
+
+    FONTS
+    - default body text  Lato, sans-serif;
+    - headings h1,h2,h3,h4,h5,h6 text   Lato, sans-serif
+    - default p text     Lato, sans-serif
+*/
+
+
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section                          { display: block }
+body                             { line-height: 1 }
+
+ul                               { list-style: none }
+blockquote,
+q                                { quotes: none }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after                          {
+                                     content: '';
+                                     content: none;
+                                 }
+.clearfix:after                  {
+                                     visibility: hidden;
+                                     display: block;
+                                     font-size: 0;
+                                     content: " ";
+                                     clear: both;
+                                     height: 0;
+                                 }
+* html .clearfix                 { zoom: 1 }
+*:first-child+html .clearfix     { zoom: 1 }
+
+.clear                           { clear: both }
+
+img                              {
+                                     border: 0;
+                                     max-width: 100%;
+                                     height: auto;
+                                     width: auto;
+                                     vertical-align: middle;
+                                   
+                                 }
+html                             { -webkit-text-size-adjust: none }
+::selection                      {
+                                     background: #006ab2;
+                                     color: #ffffff;
+                                 }
+::-moz-selection                 {
+                                     background: #006ab2;
+                                     color: #ffffff;
+                                 }
+::-webkit-selection              {
+                                     background: #006ab2;
+                                     color: #ffffff;
+                                 }
+img::selection                   { background: transparent }
+img::-moz-selection              { background: transparent }
+img::-webkit-selection           { background: transparent }
+body,
+html                             { height: 100% }
+
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+    -webkit-transition-duration: .45s;
+    -webkit-transition-property: color,border-color,background-color,opacity;
+    -webkit-transition-delay: 0s;
+    -webkit-transition-timing-function: 'ease-in-out';
+    transition-duration: .45s;
+    transition-property: color,border-color,background-color,opacity;
+    transition-delay: 0s;
+    transition-timing-function: 'ease-in-out';
+    @include backface-visibility(hidden);
+}
+* {
+    margin:0;
+    outline:none;
+    padding:0;
+    text-rendering:optimizeLegibility;
+    @include font-antialiasing;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+body {
+    color: $base-font-color;
+    font-family:$font-stack-serif;
+    font-size: $base-font-size;
+    font-weight:300;
+
+}
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+
+    @include box-sizing(border-box);
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: default; 
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    @include webkit-appearance;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: pre;
+    @include webkit-user-select;
+}
+
+
+input,textarea, select{
+
+    border: 0;
+    border-bottom: 1px solid #888888;
+    background-color: rgba(0,0,0,0);
+    color: #414042;
+    max-width: 100%;
+    line-height: 1.2;
+    border-radius: 0;
+}
+
+figcaption {
+    color: $textLightGrey;
+    font-size: 80%;
+    margin-top: 7px;
+}
+
+h3 {
+    letter-spacing: 0.02em;
+    line-height: 1.3em;
+}

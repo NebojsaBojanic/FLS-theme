@@ -1,0 +1,498 @@
+.mainNav {
+
+	/* Positioning */
+	position: absolute;
+	top: 5%;
+	right: 5%;
+
+	nav {
+
+		li {
+			/* Display & Box Model */ 
+			display: inline;
+			margin-right: 15px;
+
+			/* Other */
+			font-family:$font-stack-sans-serif;
+			text-transform: uppercase;
+			
+			&:last-child {
+
+				/* Display & Box Model */ 
+				margin-right: 0;
+			}
+
+			a {
+				
+				/* Other */
+				color: inherit;
+				font-size:15px;
+				font-weight:300;
+				letter-spacing: 0.15em;
+
+				padding: 10px 0;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+// Sticky Main Navigation
+
+.stickyMenu {
+	display: none;
+	opacity: 0;
+}
+
+.fixedMenu,
+.stickyMenu {
+	background: #fff;
+	padding: 20px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	@include trans(0.2s ease-in-out);
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+
+		/* Other */
+		font-family:$font-stack-sans-serif;
+		text-transform: uppercase;
+
+		-webkit-transition: 0.2s ease-in-out;
+		-moz-transition: 0.2s ease-in-out;
+		-o-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
+
+		a {
+			display: inline-block;
+			letter-spacing: 0.1em;
+			padding: 8px 12px;
+		}
+
+		&.meta-btn {
+			border: 2px solid grey;
+
+			a {
+				color: white;
+			}
+
+			&.button-blue {
+				border-color: $buttonBlue;
+				@include secondary-button-theme($buttonBlue);
+
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonBlue;
+					}
+				}
+			}
+			&.button-green {
+				border-color: $buttonGreen;
+				@include secondary-button-theme($buttonGreen);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonGreen;
+					}
+				}
+			}
+			&.button-light-blue {
+				border-color: $buttonLightBlue;
+				@include secondary-button-theme($buttonLightBlue);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonLightBlue;
+					}
+				}
+			}
+			&.button-brown {
+				border-color: $buttonBrown;
+				@include secondary-button-theme($buttonBrown);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonBrown;
+					}
+				}
+			}
+			&.button-orange {
+				border-color: $buttonOrange;
+				@include secondary-button-theme($buttonOrange);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonOrange;
+					}
+				}
+			}
+			&.button-purple {
+				border-color: $buttonPurple;
+				@include secondary-button-theme($buttonPurple);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonPurple;
+					}
+				}
+			}
+			&.button-red {
+				border-color: $buttonRed;
+				@include secondary-button-theme($buttonRed);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonRed;
+					}
+				}
+			}
+			&.button-salmon {
+				border-color: $buttonSalmon;
+				@include secondary-button-theme($buttonSalmon);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonSalmon;
+					}
+				}
+			}
+			&.button-sky-blue {
+				border-color: $buttonSkyBlue;
+				@include secondary-button-theme($buttonSkyBlue);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonSkyBlue;
+					}
+				}
+			}
+			&.button-turquoise {
+				border-color: $buttonTurquoise;
+				@include secondary-button-theme($buttonTurquoise);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonTurquoise;
+					}
+				}
+			}
+			&.button-white {
+				border-color: $buttonWhite;
+				@include secondary-button-theme($buttonWhite);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonWhite;
+					}
+				}
+			}
+		}
+
+		
+		&.logoMenu {
+			a {
+				display: block;
+				height:166px;
+				text-indent: -999em;
+				width:197px;
+			}
+		}
+	}
+}
+
+.is-sticky {
+	opacity: 1;
+	display: block;
+}
+
+ //Secondary Navigation
+
+.secondaryNav {
+
+	/* Display & Box Model */ 
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	
+	ul {
+		
+		text-align: center;
+			
+		li {
+
+			cursor:pointer;
+			display: inline-block;
+			font-size:$base-font-size;
+			letter-spacing:0.1em;
+			margin-right: 15px;
+			max-width: 22%;
+			vertical-align: middle;
+			@include trans(0.2s ease-in-out); 
+
+			&:last-of-type {
+
+				margin-right: 0;
+			}
+
+			&.menu-item {
+				i {
+					&._mi {
+						display: inline;
+						font-size: 2.5em!important;
+						line-height: 1;
+					}
+				}
+			}
+
+			a {
+				border: 3px solid transparent;
+				color: #fff;
+				display: inline-block;
+				font-size:24px;
+				font-weight: normal;
+				padding: 10px 20px;
+				position: relative;
+				text-decoration: none;
+				width: 100%;
+				@include trans(0.2s ease-in-out); 
+
+				&::after{
+					content:'';
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					border-radius: 0px;
+					@include trans(0.2s ease-in-out); 
+				} 
+				span {
+					&:first-child {
+						margin-right: 15px;
+					}
+				}
+				img {
+					height: 60px;
+					width: 60px;
+				}
+			}
+
+			&.button-blue {
+				border-color: $buttonBlue;
+				@include secondary-button-theme($buttonBlue);
+			}
+			&.button-green {
+				border-color: $buttonGreen;
+				@include secondary-button-theme($buttonGreen);
+			}
+			&.button-light-blue {
+				border-color: $buttonLightBlue;
+				@include secondary-button-theme($buttonLightBlue);
+			}
+			&.button-brown {
+				border-color: $buttonBrown;
+				@include secondary-button-theme($buttonBrown);
+			}
+			&.button-orange {
+				border-color: $buttonOrange;
+				@include secondary-button-theme($buttonOrange);
+			}
+			&.button-purple {
+				border-color: $buttonPurple;
+				@include secondary-button-theme($buttonPurple);
+			}
+			&.button-red {
+				border-color: $buttonRed;
+				@include secondary-button-theme($buttonRed);
+			}
+			&.button-salmon {
+				border-color: $buttonSalmon;
+				@include secondary-button-theme($buttonSalmon);
+			}
+			&.button-sky-blue {
+				border-color: $buttonSkyBlue;
+				@include secondary-button-theme($buttonSkyBlue);
+			}
+			&.button-turquoise {
+				border-color: $buttonTurquoise;
+				@include secondary-button-theme($buttonTurquoise);
+			}
+			&.button-white {
+				border-color: $buttonWhite;
+				@include secondary-button-theme($buttonWhite);
+			}
+
+		}
+
+	}
+}
+	 
+@include desktop {
+
+	.fixedMenu,
+	.stickyMenu.is-sticky,
+	.mainNav {
+		display: none;
+	}
+
+	.secondaryNav {
+
+		ul {
+
+			li.menu-item {
+				// display: block;
+				margin-right: 1%;
+
+				a {
+					i._mi {
+						margin-right: 5px;
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
+
+				
+//Hamburger Menu
+
+#nav{
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background: #fff;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 150;
+	@include translate(100%, 0, 0);
+	@include backface-visibility(hidden);
+	@include trans(transform .5s ease);
+
+}
+
+.hamburger-mobile {
+		
+	/* Positioning */
+	position: absolute;
+	top: 20px;
+	right:20px;
+	//background: #fff;
+	padding:10px;
+	cursor:pointer;
+	display: none;
+	//@include box-shadow(1);
+}
+
+#navmenu{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.nav-toggle {
+	position: fixed;
+	text-decoration: none;
+	z-index: 200;
+}
+
+.nav-open #nav {
+	 @include translate(0, 0, 0);
+}
+
+.hamburger-mobile-line {
+	cursor: pointer;
+	height: 18px;
+	position: relative;
+	width: 20px;
+	@include rotate (0deg);
+	@include trans(.5s ease-in-out);
+
+// Open Icon Settings
+	span {
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		opacity: 1;
+		left: 0;
+		@include box-shadow (2);
+		@include rotate (0deg);
+		@include trans(.25s ease-in-out);
+		&:nth-child(1) {
+			top: 0px;
+		}
+		&:nth-child(2),
+		&:nth-child(3) {
+			top: 7px;
+		}
+
+		&:nth-child(4) {
+			top: 14px;
+		}
+	}
+
+// Close Icon Settings
+	&.open {
+		span {
+			&:nth-child(1) {
+				left: 50%;
+				top: 6px;
+				width: 0;
+			}
+
+			&:nth-child(2) {
+				@include rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				@include rotate(-45deg);
+			}
+
+			&:nth-child(4) {
+				left: 50%;
+				top: 6px;
+				width:0;
+			}
+		}
+	}
+}
+
+
+@include desktop {
+
+	.hamburger-mobile {
+		display: block;
+	}
+
+}
