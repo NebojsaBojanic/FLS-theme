@@ -353,7 +353,7 @@
 	}
 }
 	 
-@include desktop {
+@include laptop {
 
 	.fixedMenu,
 	.stickyMenu.is-sticky,
@@ -362,12 +362,15 @@
 	}
 
 	.secondaryNav {
+		bottom: 0;
 
 		ul {
 
 			li.menu-item {
-				// display: block;
+				display: block;
 				margin-right: 1%;
+				max-width: 100%;
+				width: 100%;
 
 				a {
 					i._mi {

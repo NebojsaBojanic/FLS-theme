@@ -168,10 +168,14 @@ header.other-header {
 	
 }
 
- @include tablet {
+@include laptop {
 
 	.offer {
 		ul {
+			&.homepage-slider {
+				width:100%;
+			}
+
 			li {
 				a {
 					> div {
@@ -182,7 +186,7 @@ header.other-header {
 		}
 	}
 
- }
+}
 
 
 
@@ -221,11 +225,9 @@ header.other-header {
 			a {
 				&> {
 					div {
-
 						overflow:hidden;
 						padding: 0px;
 						@include box-shadow(1);
-
 					}
 				}
 			}
@@ -281,62 +283,44 @@ header.other-header {
 }
 
 
- @include tablet {
+@include tablet {
 		
-		.news {
-
-				.newsThumb {
-						
-						img {
-
-							float: left;
-							padding: 15px;
-						}
-				}
-
-				.newsThumb,.newsDescription {
-
-					float: none;
-
-				}
-
-				.newsDescription {
-
-					width:100%;
-
-				}
-
-		}
-
- }
-
- @include mobile {
-
 	.news {
-
-		ul  {
-
-			li {
-			    float: none;
-			    padding: 20px 0;
-				width: 100%;
-			}		
-
-		}
-
-		.newsThumb img {
-
+		.newsThumb {
 			float:none;
-			width:100%;
+			padding: 15px;
+			width: 100%;
+
+			img {
+				float: left;
+				float:none;
+				width: 100%;
+			}
 		}
 
-		.newsThumb,
 		.newsDescription {
-
 			float:none;
 			width: 100%;
-		}
 
+			> div {
+				padding: 0 15px 15px;
+			}
+		}
+	}
+
+}
+
+@include mobile {
+
+	.news {
+		ul  {
+			li {
+				float: none;
+				margin-bottom: 20px;
+				padding: 0;
+				width: 100%;
+			}
+		}
 	}
 
 }
@@ -549,6 +533,7 @@ header.other-header {
 			}
 		}
 	}
+
 	&.w-tags {
 		.tagcloud {
 			a {
@@ -629,6 +614,31 @@ header.other-header {
 	}
 }
 
+@include tablet {
+
+	.blog {
+		padding: 50px 0;
+	}
+
+	.aktuelles {
+		float: none;
+		margin-right: 0;
+
+		&.grid-50 {
+			width: 100%;
+		}
+	}
+
+	.right-sidebar {
+		float: none;
+
+		&.grid-30 {
+			width: 100%;
+		}
+	}
+
+}
+
 
 
 
@@ -673,6 +683,7 @@ header.other-header {
 		text-align: center;
 	}
 }
+
 .nav1-text {
 	margin: 0 auto;
 	width: 60%;
@@ -771,187 +782,199 @@ header.other-header {
   /* FOOTER
    ========================================================================== */
 
-	footer {
-		> div {
-			text-align: center;
-		}
-
-		&.bg-green {
-			address {
-				background-color: lighten($bgGreen, 10%);
-				border-color: darken($bgGreen, 20%);
-			}
-			.copy {
-				background-color: darken($bgGreen, 30%);
-				color: $bgGreen;
-			}
-		}
-		&.bg-grey {
-			address {
-				background-color: lighten($bgGrey, 10%);
-				border-color: darken($bgGrey, 20%);
-			}
-			.copy {
-				background-color: darken($bgGrey, 30%);
-				color: $bgGrey;
-			}
-		}
-		&.bg-light-blue {
-			address {
-				background-color: lighten($bgLightBlue, 10%);
-				border-color: darken($bgLightBlue, 20%);
-			}
-			.copy {
-				background-color: darken($bgLightBlue, 30%);
-				color: $bgLightBlue;
-			}
-		}
-		&.bg-kaki {
-			address {
-				background-color: lighten($bgKaki, 10%);
-				border-color: darken($bgKaki, 20%);
-			}
-			.copy {
-				background-color: darken($bgKaki, 30%);
-				color: $bgKaki;
-			}
-		}
-		&.bg-orange {
-			address {
-				background-color: lighten($bgOrange, 10%);
-				border-color: darken($bgOrange, 20%);
-			}
-			.copy {
-				background-color: darken($bgOrange, 30%);
-				color: $bgOrange;
-			}
-		}
-		&.bg-violet {
-			address {
-				background-color: lighten($bgViolet, 10%);
-				border-color: darken($bgViolet, 20%);
-			}
-			.copy {
-				background-color: darken($bgViolet, 30%);
-				color: $bgViolet;
-			}
-		}
-		&.bg-white {
-			address {
-				background-color: darken(#ffffff, 10%);
-				border-color: darken(#ffffff, 20%);
-			}
-			.copy {
-				background-color: darken(#ffffff, 30%);
-				color: #ffffff;
-			}
-		}
-		&.bg-yellow {
-			address {
-				background-color: lighten($bgYellow, 10%);
-				border-color: darken($bgYellow, 20%);
-			}
-			.copy {
-				background-color: darken($bgYellow, 30%);
-				color: $bgYellow;
-			}
-		}
-
-		address {
-			font-style:normal;
-			font-variant:normal;
-			font-weight:normal;
-
-			border: 2px dashed;
-			padding: 20px;
-
-			display: inline-block;
-			vertical-align: middle;
-
-			.table-cell {
-				color: #534a31;
-				font-size: 17px;
-				font-weight: bold;
-				padding: 5px;
-				text-align: left;
-
-				&.table-cell-h {
-					color: #6e6241;
-					font-size: 16px;
-					font-weight: 300;
-				}
-			}
-		}
-
-     	h5 {
-		 	color: $footerSocialMediaHeading;
-		 	font-size: 38px;
-		 	font-weight:300;
-		 	line-height:1.3;
-		 	margin-bottom: 12px;
-		}
-
-     	.copy {
-
-     		margin-top: 40px;
-     		padding: 20px;
-
-     		p {
-
-     			font-size:14px;
-     			text-align: center;
-
-     		}
-     	}
-
-	   	.footer-column {
-	   		display: inline-block;
-	   		vertical-align: middle;
-	   		width: 33%;
-	   	}
-		
-
-   	}
-
-
-   .footerSocial {
-
-		input {
-
-			background-color: $footerSearchInput;
-			background-image: url('../images/search.jpg');
-			background-position: right center; 
-			background-repeat: no-repeat;
-			border: 1px solid $footerSearchInputBorder;
-			box-sizing: border-box;
-			font-size: 16px;
-			padding: 12px 20px 12px 40px;
-		}
-
-		ul {
-
-			li {
-				display: inline-block;
-
-				a {
-					img {
-						max-width: 84%;
-					}
-				}
-			}
-
-		}
-
-   }
-
-
-   .w-calendar {
-
-   		div {
-		    margin: 0 auto;
-		}
-
+footer {
+	> div {
+		text-align: center;
 	}
+
+	&.bg-green {
+		address {
+			background-color: lighten($bgGreen, 10%);
+			border-color: darken($bgGreen, 20%);
+		}
+		.copy {
+			background-color: darken($bgGreen, 30%);
+			color: $bgGreen;
+		}
+	}
+	&.bg-grey {
+		address {
+			background-color: lighten($bgGrey, 10%);
+			border-color: darken($bgGrey, 20%);
+		}
+		.copy {
+			background-color: darken($bgGrey, 30%);
+			color: $bgGrey;
+		}
+	}
+	&.bg-light-blue {
+		address {
+			background-color: lighten($bgLightBlue, 10%);
+			border-color: darken($bgLightBlue, 20%);
+		}
+		.copy {
+			background-color: darken($bgLightBlue, 30%);
+			color: $bgLightBlue;
+		}
+	}
+	&.bg-kaki {
+		address {
+			background-color: lighten($bgKaki, 10%);
+			border-color: darken($bgKaki, 20%);
+		}
+		.copy {
+			background-color: darken($bgKaki, 30%);
+			color: $bgKaki;
+		}
+	}
+	&.bg-orange {
+		address {
+			background-color: lighten($bgOrange, 10%);
+			border-color: darken($bgOrange, 20%);
+		}
+		.copy {
+			background-color: darken($bgOrange, 30%);
+			color: $bgOrange;
+		}
+	}
+	&.bg-violet {
+		address {
+			background-color: lighten($bgViolet, 10%);
+			border-color: darken($bgViolet, 20%);
+		}
+		.copy {
+			background-color: darken($bgViolet, 30%);
+			color: $bgViolet;
+		}
+	}
+	&.bg-white {
+		address {
+			background-color: darken(#ffffff, 10%);
+			border-color: darken(#ffffff, 20%);
+		}
+		.copy {
+			background-color: darken(#ffffff, 30%);
+			color: #ffffff;
+		}
+	}
+	&.bg-yellow {
+		address {
+			background-color: lighten($bgYellow, 10%);
+			border-color: darken($bgYellow, 20%);
+		}
+		.copy {
+			background-color: darken($bgYellow, 30%);
+			color: $bgYellow;
+		}
+	}
+
+	address {
+		font-style:normal;
+		font-variant:normal;
+		font-weight:normal;
+
+		border: 2px dashed;
+		padding: 20px;
+
+		display: inline-block;
+		vertical-align: middle;
+
+		.table-cell {
+			color: #534a31;
+			font-size: 17px;
+			font-weight: bold;
+			padding: 5px;
+			text-align: left;
+
+			&.table-cell-h {
+				color: #6e6241;
+				font-size: 16px;
+				font-weight: 300;
+			}
+		}
+	}
+
+ 	h5 {
+	 	color: $footerSocialMediaHeading;
+	 	font-size: 38px;
+	 	font-weight:300;
+	 	line-height:1.3;
+	 	margin-bottom: 12px;
+	}
+
+	.copy {
+
+		margin-top: 40px;
+		padding: 20px;
+
+		p {
+
+			font-size:14px;
+			text-align: center;
+
+		}
+	}
+
+	.footer-column {
+		display: inline-block;
+		vertical-align: middle;
+		width: 33%;
+	}
+
+}
+
+
+.footerSocial {
+
+	input {
+		background-color: $footerSearchInput;
+		background-image: url('../images/search.jpg');
+		background-position: right center; 
+		background-repeat: no-repeat;
+		border: 1px solid $footerSearchInputBorder;
+		box-sizing: border-box;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+	}
+
+	ul {
+		li {
+			display: inline-block;
+
+			a {
+				img {
+					max-width: 84%;
+				}
+			}
+		}
+	}
+
+}
+
+
+.w-calendar {
+
+	div {
+		margin: 0 auto;
+	}
+
+}
+
+@include laptop {
+
+	footer {
+		.footer-column {
+			margin-bottom: 30px;
+			width: 100%;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
 
   /* Two-image-layout
    ========================================================================== */
