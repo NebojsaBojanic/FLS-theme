@@ -13,8 +13,14 @@ header.home {
 	height:100%;
 }
 header.other-header {
-  	margin-bottom: 210px;
+	margin-bottom: 210px;
 }
+@include laptop {
+	header.other-header {
+		margin-bottom: 50px;
+	}
+}
+
 
 .logo {
 	img {
@@ -90,7 +96,15 @@ header.other-header {
 
 
 .section-one {
-	margin-top: 100px;
+	margin: 100px 0;
+}
+
+@include laptop {
+
+	.section-one {
+		margin: 50px 0;
+	}
+
 }
 
 
@@ -527,8 +541,19 @@ header.other-header {
 		ul {
 			li {
 				a {
-					max-width: 60%;
 					vertical-align: middle;
+
+					&:nth-of-type(1) {
+						max-width: 40%;
+					}
+
+					&:nth-of-type(2) {
+						max-width: 55%;
+					}
+
+					.wpp-thumbnail {
+						margin-right: 5%;
+					}
 				}
 			}
 		}
@@ -617,11 +642,12 @@ header.other-header {
 @include tablet {
 
 	.blog {
-		padding: 50px 0;
+		padding: 50px 20px;
 	}
 
 	.aktuelles {
 		float: none;
+		margin-bottom: 50px;
 		margin-right: 0;
 
 		&.grid-50 {
@@ -633,7 +659,41 @@ header.other-header {
 		float: none;
 
 		&.grid-30 {
-			width: 100%;
+			margin: 0 auto;
+			width: 70%;
+		}
+	}
+
+	.sidebar-widget {
+
+		.sidebar-subtitle {
+			margin-bottom: 15px;
+		}
+	}
+
+}
+
+@include mobile {
+
+	.right-sidebar {
+		&.grid-30 {
+			width: 90%;
+		}
+	}
+
+	.sidebar-widget {
+		margin-bottom: 50px;
+
+		ul {
+			li {
+				display: block;
+
+				a {
+					display: inline-block;
+					line-height: 1.5em;
+					padding: 5px 0;
+				}
+			}
 		}
 	}
 
@@ -689,7 +749,15 @@ header.other-header {
 	width: 60%;
 }
 
+/* Team custom post template */
 .team {
+	.team-article {
+		margin: 0 auto;
+		width: 90%;
+	}
+}
+
+.team-single {
 	.section-title {
 		text-align: left;
 	}
@@ -714,7 +782,60 @@ header.other-header {
 				}
 			}
 		}
+
+		.permalink {
+			margin-top: 10px;
+			text-align: left;
+
+			a {
+				padding: 10px 0;
+
+				&:hover {
+					text-decoration: underline;
+				}		
+			}
+		}
 	}
+}
+
+@include desktop {
+
+	.nav,
+	.team {
+		padding: 50px 20px;
+	}
+
+}
+
+@include tablet {
+
+	.nav-article,
+	.team-article {
+		margin-bottom: 50px;
+
+		&.grid-50 {
+			width: 100%;
+		}
+	}
+
+	.nav-right-sidebar {
+		float: none;
+
+		&.grid-30 {
+			margin: 0 auto;
+			width: 70%;
+		}
+	}
+}
+
+@include mobile {
+
+	.nav-right-sidebar {
+		&.grid-30 {
+			width: 90%;
+		}
+	}
+
 }
 
 
@@ -783,6 +904,8 @@ header.other-header {
    ========================================================================== */
 
 footer {
+	text-align: center;
+
 	> div {
 		text-align: center;
 	}

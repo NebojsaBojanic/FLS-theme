@@ -4,6 +4,7 @@
 	letter-spacing: 0.03em;
 	line-height: 1.3em;
 	margin-bottom: 20px;
+	padding: 0;
 	text-align: center;
 }
 
@@ -82,6 +83,10 @@
 				color: #fff;
 				display: block;
 
+				&:hover {
+					text-decoration: underline;
+				}
+
 				i {
 					font-size: 5em;
 					margin: 15px 0 25px;
@@ -158,6 +163,8 @@
 
 .acf-gallery {
 	ul {
+		margin: 30px auto;
+
 		&.grid-gallery {
 			li {
 				&.not-displayed-images {
@@ -255,6 +262,13 @@
 	}
 
 }
+@include desktop {
+
+	.acf-paragraph-image {
+		padding: 50px 20px;
+	}
+
+}
 @include tablet {
 
 	.acf-paragraph-image {
@@ -326,7 +340,7 @@
 .acf-team {
 	ul.team-members {
 		overflow: hidden;
-		margin-top: 50px;
+		margin: 50px auto;
 
 		li.acf-member {
 			background-color: #FFF;
@@ -337,6 +351,14 @@
 
 			&:nth-of-type(2n+1) {
 				margin-right: 4%;
+			}
+
+			&:nth-last-of-type(2) {
+				margin-bottom: 0;
+			}
+
+			&:nth-last-of-type(1) {
+				margin-bottom: 0;
 			}
 
 			figure {
@@ -383,6 +405,16 @@
 					}
 				}
 			}
+			.permalink {
+				margin: 20px 0;
+				text-align: left;
+
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
 		}
 	}
 
@@ -391,6 +423,69 @@
 	}
 }
 
+@include laptop {
+
+	.acf-team {
+		ul.team-members {
+			padding: 0 20px;
+
+			li.acf-member {
+				display: block;
+				width: 100%;
+
+				&:nth-of-type(2n+1) {
+					margin-right: 0;
+				}
+
+				&:nth-last-of-type(2) {
+					margin-bottom: 4%;
+				}
+
+				.team-member-info {
+					h3 {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@include mobile {
+
+	.acf-team {
+		ul.team-members {
+			li.acf-member {
+				margin-bottom: 50px;
+
+				figure {
+					display: block;
+					margin-right: 0;
+					width: 100%;
+				}
+
+				.team-member-info {
+					display: block;
+					padding: 10px;
+					width: 100%;
+
+					h3 {
+						margin: 5px 0;
+					}
+
+					ul.social-media {
+						li {
+							margin-right: 5px;
+							width: 45px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
 
 
 .acf-text-only {

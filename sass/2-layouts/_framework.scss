@@ -21,45 +21,45 @@
 .grid-100,
 .grid-960,
 .grid-1160,
-.grid-1440      { position: relative }
+.grid-1440 { position: relative }
 
 /** GLOBAL GRID SIZES **/
 
-.grid-5        { width: 5% }
-.grid-10       { width: 10% }
-.grid-15       { width: 15% }
-.grid-20       { width: 20% }
-.grid-25       { width: 25% }
-.grid-30       { width: 30% }
-.grid-33       { width: 33% }
-.grid-35       { width: 35% }
-.grid-40       { width: 40% }
-.grid-45       { width: 45% }
-.grid-50       { width: 50% }
-.grid-55       { width: 55% }
-.grid-60       { width: 60% }
-.grid-65       { width: 65% }
-.grid-70       { width: 70% }
-.grid-75       { width: 75% }
-.grid-80       { width: 80% }
-.grid-85       { width: 85%;}
-.grid-90       { width: 90% }
-.grid-95       { width: 95% }
-.grid-100      { width: 100% }
+.grid-5		{ width: 5% }
+.grid-10	{ width: 10% }
+.grid-15	{ width: 15% }
+.grid-20	{ width: 20% }
+.grid-25	{ width: 25% }
+.grid-30	{ width: 30% }
+.grid-33	{ width: 33% }
+.grid-35	{ width: 35% }
+.grid-40	{ width: 40% }
+.grid-45	{ width: 45% }
+.grid-50	{ width: 50% }
+.grid-55	{ width: 55% }
+.grid-60	{ width: 60% }
+.grid-65	{ width: 65% }
+.grid-70	{ width: 70% }
+.grid-75	{ width: 75% }
+.grid-80	{ width: 80% }
+.grid-85	{ width: 85%;}
+.grid-90	{ width: 90% }
+.grid-95	{ width: 95% }
+.grid-100	{ width: 100% }
 
 .grid-960 { 
-    max-width: 960px;
-	  @include center-block;
+	max-width: 960px;
+	@include center-block;
 }
-   
+
 .grid-1160 {
-  	max-width: 1160px;
-  	@include center-block;
+	max-width: 1160px;
+	@include center-block;
 }
 
 .grid-1440 {
-    max-width: 1440px;
-    @include center-block;
+	max-width: 1440px;
+	@include center-block;
 }
 
 
@@ -69,287 +69,282 @@
 // Addition by Nebojsa
 
 .display-none {
-  display: none;
+	display: none;
 }
 
 .page-center {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 // End: Addition by Nebojsa
 
 
 .pageBody { 
-    height: 100%;
-    position: relative;
+	height: 100%;
+	position: relative;
 }
 
 footer {
-    padding-top: 80px;
-    width: 100%;
+	padding-top: 80px;
+	width: 100%;
 }
 
 header {
-    position:relative;
+	position:relative;
 }
-
 
 
 
 // Links
 
 .downloadButton {
-    background:$brand-blue-color;
-    cursor: pointer;
-    display: inline-block;
-    color:#fff;
-    padding: 10px 40px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: none;
-     transition: all 0.5s ease;
-    @include border-radius(100px);
-    margin-bottom: 25px;
+	background:$brand-blue-color;
+	cursor: pointer;
+	display: inline-block;
+	color:#fff;
+	padding: 10px 40px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	 transition: all 0.5s ease;
+	@include border-radius(100px);
+	margin-bottom: 25px;
 
-    .extension {text-transform:uppercase;}
-    a {
-        color:#fff;
-        display: block;
-        font-size:20px;
-        line-height:1.1;
-        position:relative;
-        transition: 0.3s all;
+	.extension {text-transform:uppercase;}
+	a {
+		color:#fff;
+		display: block;
+		font-size:20px;
+		line-height:1.1;
+		position:relative;
+		transition: 0.3s all;
 
-        small {
-            display: block;
-            font-size:11px;
-        }
-    }
-    &:hover {
-        background:darken($brand-blue-color,10%);
-    }
-    
-    i {
-        color:#fff;
-        font-size:36px;
-        vertical-align:middle;
-    }
+		small {
+			display: block;
+			font-size:11px;
+		}
+	}
+	&:hover {
+		background:darken($brand-blue-color,10%);
+	}
+	
+	i {
+		color:#fff;
+		font-size:36px;
+		vertical-align:middle;
+	}
 }
 
 
 
 
-.paragraph  {
-    padding-right: 10%;
-    h2 {
+.paragraph {
+	padding-right: 10%;
+	h2 {
 
-      color:#0072bc;
-      font-size:40px;
-      font-weight:300;  
-      letter-spacing: 0.07em;
-      line-height:1.3;
+		color:#0072bc;
+		font-size:40px;
+		font-weight:300;
+		letter-spacing: 0.07em;
+		line-height:1.3;
 
-    }
+	}
 
-    p {
+	p {
 
-      font-size:20px;
-      line-height:28px;
-      font-weight:300;
-      color:$base-font-color;
-    }
+		font-size:20px;
+		line-height:28px;
+		font-weight:300;
+		color:$base-font-color;
+	}
 }
 
 .paragraph-2 {
-    padding-left: 10%;
-    h2 {
-        font-size:40px;
-        line-height:1.3;
-        color:#0072bc;
-        letter-spacing:0.15em;
-        font-weight:300;  
-    }
-    p {
-        font-size:20px;
-        line-height:28px;
-        font-weight:300;
-        color:$base-font-color;
-    }
+	padding-left: 10%;
+	h2 {
+		font-size:40px;
+		line-height:1.3;
+		color:#0072bc;
+		letter-spacing:0.15em;
+		font-weight:300;
+	}
+	p {
+		font-size:20px;
+		line-height:28px;
+		font-weight:300;
+		color:$base-font-color;
+	}
 }
 
 p {
-    letter-spacing: 0.03em;
-    line-height: 1.3;
-    font-size:$base-font-size;
+	font-size:$base-font-size;
+	letter-spacing: 0.03em;
+	line-height: 1.3;
 }
-        
-      h1 {
-        color:#53b4e5;
-        font-size: 2.5em;
-        line-height: 1.15em;
-       
+		
+h1 {
+	color:#53b4e5;
+	font-size: 2.5em;
+	line-height: 1.15em;
+}
 
-      }
+h2 {
+	font-size: 24px;
+	padding-bottom: 35px;
+	padding-top: 15px;
+}
 
+h1,h2 {
+	font-weight: normal;
+}
 
-
-       h2 { font-size: 24px;padding-top: 15px;padding-bottom: 35px;}
-
-        h1,h2 {
-
-            font-weight: normal;
-        }
+h1,h2,h3,h4,h5,h6 {
+	font-family:$font-stack-serif;
+}
 
 section {
 
-    padding:50px 0;
-    overflow:hidden;
+	padding:50px 0;
+	overflow:hidden;
 
 }
 
 /* TABLE SETTINGS */
 .textCenter {
-    text-align: center;
+	text-align: center;
 }
 
-  .table {
+.table {
 
-      border-collapse: collapse;
-      display: table;
-      font-family:$font-stack-serif;
-      height: 100%;
-      width: 100%;
+	border-collapse: collapse;
+	display: table;
+	font-family:$font-stack-serif;
+	height: 100%;
+	width: 100%;
 
-      tr {
+	tr {
 
-              td {
+		td {
 
-                  border-left: 0;
-                  border-right: 0;
-                  color: #414042;
-                  font-size:16px;
-                  padding: 12px 0;
-              }
-      }
+			border-left: 0;
+			border-right: 0;
+			color: #414042;
+			font-size:16px;
+			padding: 12px 0;
+		}
+	}
 
-  }
-  
-  th {
+}
 
-      border-bottom: 1px solid #101010;
-      border-top: 0;
-      color: #101010;
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      line-height: 1.275;
-      padding-bottom: 20px;
-      padding-top: 0;
-      text-align: left;
-      text-transform: uppercase;
-      @include font-antialiasing;
+th {
 
-  }
+	border-bottom: 1px solid #101010;
+	border-top: 0;
+	color: #101010;
+	font-size: 13px;
+	letter-spacing: 0.2em;
+	line-height: 1.275;
+	padding-bottom: 20px;
+	padding-top: 0;
+	text-align: left;
+	text-transform: uppercase;
+	@include font-antialiasing;
 
-
+}
 
 
 #top {
 
-    background: rgba(255,255,255,0.15) center no-repeat;
-    border: 2px solid $brand-blue-color;
-    border-radius: 4px;
-    bottom: 20px;
-    display: none;
-    height: 39px;
-    position: fixed;
-    right: 20px;
-    width: 39px;
-    z-index: 1000;
-    -moz-border-radius: 4px;
+	background: rgba(255,255,255,0.15) center no-repeat;
+	border: 2px solid $brand-blue-color;
+	border-radius: 4px;
+	bottom: 20px;
+	display: none;
+	height: 39px;
+	position: fixed;
+	right: 20px;
+	width: 39px;
+	z-index: 1000;
+	-moz-border-radius: 4px;
 
-    i {
+	i {
 
-        color: #53b4e5;
-        display: block;
-        font-size: 15px;
-        line-height: 34px;
-        text-align: center;
-        vertical-align: middle;
+		color: #53b4e5;
+		display: block;
+		font-size: 15px;
+		line-height: 34px;
+		text-align: center;
+		vertical-align: middle;
 
-    }
+	}
 
 
 }
 
 .tableCell {
-    display: table-cell;
+	display: table-cell;
 }
 
 .alignMiddle {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 .alignTop {
-    vertical-align: top
+	vertical-align: top
 }
 
 .alignBottom {
-    vertical-align: bottom
+	vertical-align: bottom
 }
 
 
 blockquote {
-   
-    border-left: 1px solid #aaa;
-    color: #999;
-    font-size: 22px;
-    font-style:italic;
-    line-height:27px;
-    margin-bottom: 25px;
-    padding:20px;
-    text-align: center;
-
+	border-left: 1px solid #aaa;
+	color: #999;
+	font-size: 22px;
+	font-style:italic;
+	line-height:27px;
+	margin-bottom: 25px;
+	padding:20px;
+	text-align: center;
 }
-
- h1,h2,h3,h4,h5,h6 { font-family:$font-stack-serif;}
 
 
 .socialMedia {
-    padding-bottom: 25px;
+	padding-bottom: 25px;
 
-    li { display: inline-block;margin-right:10px;
+	li { display: inline-block;margin-right:10px;
 
-        i {
-            font-size:32px;color: #fff;
-            transition:0.3s all;
+		i {
+			font-size:32px;color: #fff;
+			transition:0.3s all;
 
-            &:hover {
-              color: #53b4e5;
-            }
-        }
+			&:hover {
+				color: #53b4e5;
+			}
+		}
 
-        &:nth-child(2) {
-            margin-right: 0;
-        }
-    }
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+	}
 }
 
 
 .mobileSocial {
-    padding:0 45px 15px 45px;
-    li {
-        i {
-            color:$brand-gray-color;
-        }
-    }
-    a {
-        color:$brand-gray-color;
-        display:inline-block;
-        font-size:13px;
-        margin-top:15px;
-    }
- 
+	padding:0 45px 15px 45px;
+	li {
+		i {
+			color:$brand-gray-color;
+		}
+	}
+	a {
+		color:$brand-gray-color;
+		display:inline-block;
+		font-size:13px;
+		margin-top:15px;
+	}
 }
 
 
@@ -357,107 +352,105 @@ blockquote {
 // LISTS unordered & ordered
 
 ol {
-  &.flsList {
-    counter-reset: li-counter;
-    list-style-type: none;
-    margin: 0;
-    margin-left: 15px;
-    padding: 0;
-    padding-bottom: 25px;
-    padding-right:35px;
-    &> {
-      li {
-        line-height:1.4;
-        padding-bottom: 10px;
-        padding-left: 0.5em;
-        position: relative;
-        ::before {
-          color:$brand-blue-color;
-          content: counter(li-counter);
-          counter-increment: li-counter;
-          direction: rtl;
-          font-weight:bold;
-          left: -1em;
-          position: absolute;
-          text-align: right; 
-          top: 0;
-          width: 1em;
-        }
-        a {
-          color:$brand-gray-color;
-          position: relative;
-          text-decoration:none;
-          ::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0px;
-            width: 100%;
-            height: 1px !important;
-            background: #BABCBE
-          }
-          &:hover {
-            &::after {
-              background:$brand-blue-color;
-            }
-          }
-        }
-      }
-    }
-  }
+	&.flsList {
+		counter-reset: li-counter;
+		list-style-type: none;
+		margin: 0;
+		margin-left: 15px;
+		padding: 0;
+		padding-bottom: 25px;
+		padding-right:35px;
+		&> {
+			li {
+				line-height:1.4;
+				padding-bottom: 10px;
+				padding-left: 0.5em;
+				position: relative;
+				::before {
+					color:$brand-blue-color;
+					content: counter(li-counter);
+					counter-increment: li-counter;
+					direction: rtl;
+					font-weight:bold;
+					left: -1em;
+					position: absolute;
+					text-align: right; 
+					top: 0;
+					width: 1em;
+				}
+				a {
+					color:$brand-gray-color;
+					position: relative;
+					text-decoration:none;
+					::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0px;
+					width: 100%;
+					height: 1px !important;
+					background: #BABCBE
+					}
+					&:hover {
+						&::after {
+							background:$brand-blue-color;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
 .unordered {
-    ul {
-        padding-right: 35px;
-        &> {
+	ul {
+		padding-right: 35px;
 
-            li::before {
-            content: '–';
-            left: 0;
-            margin-left: 15px;
-            margin-right:15px;
-            position: absolute;
-            top: 0;
-        }
-    }
+		&> {
+			li::before {
+				content: '–';
+				left: 0;
+				margin-left: 15px;
+				margin-right:15px;
+				position: absolute;
+				top: 0;
+			}
+		}
 
-    li {
-        line-height:1.4;
-        padding-bottom: 10px;
-        padding-left: 35px;
-        position: relative;
-    }
-
- }
-
+		li {
+			line-height:1.4;
+			padding-bottom: 10px;
+			padding-left: 35px;
+			position: relative;
+		}
+	}
 }
 
 
 /* FLS Button Themes */
 .fls-button {
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 17px;
-  letter-spacing: 0.2em;
-  padding: 13px 28px;
-  text-transform: uppercase;
-  @include trans(0.2s ease-in-out); 
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 17px;
+	letter-spacing: 0.2em;
+	padding: 13px 28px;
+	text-transform: uppercase;
+	@include trans(0.2s ease-in-out); 
 }
 
 
 // Addition by Nebojsa 
 
 .display-table {
-    display: table;
+	display: table;
 }
 .table-row {
-    display: table-row;
+	display: table-row;
 }
 .table-cell {
-    display: table-cell;
+	display: table-cell;
 }
 
 
@@ -466,142 +459,142 @@ ol {
 /* ##########################################################################
  ################################# Text colors ################################ */
 .text-beige {
-  color: $textBeige;
+	color: $textBeige;
 }
 .text-black {
-  color: $textBlack;
+	color: $textBlack;
 }
 .text-blue {
-  color: $textBlue;
+	color: $textBlue;
 }
 .text-brown {
-  color: $textBrown;
+	color: $textBrown;
 }
 .text-dark-grey {
-  color: $textDarkGrey;
+	color: $textDarkGrey;
 }
 .text-dark-kaki {
-  color: $textDarkKaki;
+	color: $textDarkKaki;
 }
 .text-grey {
-  color: $textGrey;
+	color: $textGrey;
 }
 .text-green {
-  color: $textGreen;
+	color: $textGreen;
 }
 .text-light-blue {
-  color: $textLightBlue;
+	color: $textLightBlue;
 }
 .text-light-grey {
-  color: $textLightGrey;
+	color: $textLightGrey;
 }
 .text-orange {
-  color: $textOrange;
+	color: $textOrange;
 }
 .text-purple {
-  color: $textPurple;
+	color: $textPurple;
 }
 .text-red {
-  color: $textRed;
+	color: $textRed;
 }
 .text-salmon {
-  color: $textSalmon;
+	color: $textSalmon;
 }
 .text-turquoise {
-  color: $textTurquoise;
+	color: $textTurquoise;
 }
 .text-violet {
-  color: $textViolet;
+	color: $textViolet;
 }
 .text-white {
-  color: $textWhite;
+	color: $textWhite;
 }
 
 /* ##########################################################################
  ############################# Background colors ############################## */
 .bg-black {
-  background-color: $bgBlack;
+	background-color: $bgBlack;
 }
 .bg-blue {
-  background-color: $bgBlue;
+	background-color: $bgBlue;
 }
 .bg-green {
-  background-color: $bgGreen;
+	background-color: $bgGreen;
 }
 .bg-grey {
-  background-color: $bgGrey;
+	background-color: $bgGrey;
 }
 .bg-light-blue {
-  background-color: $bgLightBlue;
+	background-color: $bgLightBlue;
 }
 .bg-kaki {
-  background-color: $bgKaki;
+	background-color: $bgKaki;
 }
 .bg-orange {
-  background-color: $bgOrange;
+	background-color: $bgOrange;
 }
 .bg-purple {
-  background-color: $bgPurple;
+	background-color: $bgPurple;
 }
 .bg-red {
-  background-color: $bgRed;
+	background-color: $bgRed;
 }
 .bg-violet {
-  background-color: $bgViolet;
+	background-color: $bgViolet;
 }
 .bg-white {
-  background-color: #FFF;
+	background-color: #FFF;
 }
 .bg-yellow {
-  background-color: $bgYellow;
+	background-color: $bgYellow;
 }
 
 /* #######################################################################################
  ################################# Butons Background colors ################################ */
 .button-blue {
-  @include fls-button-theme($buttonBlue);
+	@include fls-button-theme($buttonBlue);
 }
 .button-green {
-  @include fls-button-theme($buttonGreen);
+	@include fls-button-theme($buttonGreen);
 }
 .button-light-blue {
-  @include fls-button-theme($buttonLightBlue);
+	@include fls-button-theme($buttonLightBlue);
 }
 .button-brown {
-  @include fls-button-theme($buttonBrown);
+	@include fls-button-theme($buttonBrown);
 }
 .button-orange {
-  @include fls-button-theme($buttonOrange);
+	@include fls-button-theme($buttonOrange);
 }
 .button-purple {
-  @include fls-button-theme($buttonPurple);
+	@include fls-button-theme($buttonPurple);
 }
 .button-red {
-  @include fls-button-theme($buttonRed);
+	@include fls-button-theme($buttonRed);
 }
 .button-salmon {
-  @include fls-button-theme($buttonSalmon);
+	@include fls-button-theme($buttonSalmon);
 }
 .button-sky-blue {
-  @include fls-button-theme($buttonSkyBlue);
+	@include fls-button-theme($buttonSkyBlue);
 }
 .button-turquoise {
-  @include fls-button-theme($buttonTurquoise);
+	@include fls-button-theme($buttonTurquoise);
 }
 .button-white {
-  @include fls-button-theme(#ffffff);
+	@include fls-button-theme(#ffffff);
 }
 
 /* #######################################################################################
  ######################################## Patterns ######################################### */
 .pattern-black {
-  background-image: url('images/Pattern_black.png');
+	background-image: url('images/Pattern_black.png');
 }
 .pattern-white {
-  background-image: url('images/Pattern_white.png');
+	background-image: url('images/Pattern_white.png');
 }
 .pattern-yellow {
-  background-image: url('images/Pattern_footer_1.png');
+	background-image: url('images/Pattern_footer_1.png');
 }
 
 
