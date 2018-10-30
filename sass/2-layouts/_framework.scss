@@ -62,6 +62,13 @@
 	@include center-block;
 }
 
+@include tablet {
+	.grid-100 {
+		margin: 0 auto;
+		width: 90%;
+	}
+}
+
 
 .fl {float: left;position: relative;}
 .fr{float: right;position: relative;}

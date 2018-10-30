@@ -1,5 +1,4 @@
 .mainNav {
-
 	/* Positioning */
 	position: absolute;
 	top: 5%;
@@ -17,13 +16,11 @@
 			text-transform: uppercase;
 			
 			&:last-child {
-
 				/* Display & Box Model */ 
 				margin-right: 0;
 			}
 
 			a {
-				
 				/* Other */
 				color: inherit;
 				font-size:15px;
@@ -31,13 +28,9 @@
 				letter-spacing: 0.15em;
 
 				padding: 10px 0;
-
 			}
-
 		}
-
 	}
-
 }
 
 
@@ -197,17 +190,6 @@
 					}
 				}
 			}
-			&.button-white {
-				border-color: $buttonWhite;
-				@include secondary-button-theme($buttonWhite);
-				&.current-menu-item {
-					background-color: #FFF;
-					
-					a {
-						color: $buttonWhite;
-					}
-				}
-			}
 		}
 
 		
@@ -230,7 +212,6 @@
  //Secondary Navigation
 
 .secondaryNav {
-
 	/* Display & Box Model */ 
 	position: absolute;
 	bottom: 5%;
@@ -240,11 +221,9 @@
 	width: 100%;
 	
 	ul {
-		
 		text-align: center;
-			
-		li {
 
+		li {
 			cursor:pointer;
 			display: inline-block;
 			font-size:$base-font-size;
@@ -255,7 +234,6 @@
 			@include trans(0.2s ease-in-out); 
 
 			&:last-of-type {
-
 				margin-right: 0;
 			}
 
@@ -343,13 +321,7 @@
 				border-color: $buttonTurquoise;
 				@include secondary-button-theme($buttonTurquoise);
 			}
-			&.button-white {
-				border-color: $buttonWhite;
-				@include secondary-button-theme($buttonWhite);
-			}
-
 		}
-
 	}
 }
 	 
@@ -378,34 +350,196 @@
 					}
 				}
 			}
-
 		}
-
 	}
-
 }
 
 				
 //Hamburger Menu
 
 #slideMenu {
-	width: 100%;
-	max-width: 100%;
-	height: 100%;
-	overflow-y: auto;
 	background: #fff;
+	height: 100%;
+	max-width: 100%;
+	overflow-y: auto;
 	position: fixed;
 	right: 0;
 	top: 0;
+	width: 100%;
 	z-index: 150;
-	@include translate(100%, 0, 0);
 	@include backface-visibility(hidden);
 	@include trans(transform .5s ease);
+	@include translate(100%, 0, 0);
 
+	.stickyMobileMenu {
+		display: table;
+		height: 100%;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	.menu-fixed-navigation-container {
+		display: table-cell;
+		padding: 20px;
+		position: static;
+		text-align: center;
+		top: 0;
+		vertical-align: middle;
+		width: 100%;
+		@include trans(0.2s ease-in-out);
+
+		ul {
+			display: inline-block;
+
+			li {
+				display: block;
+				margin: 0 0 15px;
+
+				/* Other */
+				font-family:$font-stack-sans-serif;
+				text-transform: uppercase;
+
+				-webkit-transition: 0.2s ease-in-out;
+				-moz-transition: 0.2s ease-in-out;
+				-o-transition: 0.2s ease-in-out;
+				transition: 0.2s ease-in-out;
+
+				a {
+					display: inline-block;
+					letter-spacing: 0.1em;
+					padding: 14px 28px;
+				}
+
+				&.meta-btn {
+					border: 2px solid grey;
+					display: block;
+
+					a {
+						color: white;
+					}
+
+					&.button-blue {
+						border-color: $buttonBlue;
+						@include secondary-button-theme($buttonBlue);
+
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonBlue;
+							}
+						}
+					}
+					&.button-green {
+						border-color: $buttonGreen;
+						@include secondary-button-theme($buttonGreen);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonGreen;
+							}
+						}
+					}
+					&.button-light-blue {
+						border-color: $buttonLightBlue;
+						@include secondary-button-theme($buttonLightBlue);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonLightBlue;
+							}
+						}
+					}
+					&.button-brown {
+						border-color: $buttonBrown;
+						@include secondary-button-theme($buttonBrown);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonBrown;
+							}
+						}
+					}
+					&.button-orange {
+						border-color: $buttonOrange;
+						@include secondary-button-theme($buttonOrange);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonOrange;
+							}
+						}
+					}
+					&.button-purple {
+						border-color: $buttonPurple;
+						@include secondary-button-theme($buttonPurple);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonPurple;
+							}
+						}
+					}
+					&.button-red {
+						border-color: $buttonRed;
+						@include secondary-button-theme($buttonRed);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonRed;
+							}
+						}
+					}
+					&.button-salmon {
+						border-color: $buttonSalmon;
+						@include secondary-button-theme($buttonSalmon);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonSalmon;
+							}
+						}
+					}
+					&.button-sky-blue {
+						border-color: $buttonSkyBlue;
+						@include secondary-button-theme($buttonSkyBlue);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonSkyBlue;
+							}
+						}
+					}
+					&.button-turquoise {
+						border-color: $buttonTurquoise;
+						@include secondary-button-theme($buttonTurquoise);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonTurquoise;
+							}
+						}
+					}
+				}
+				
+				&.logoMenu {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .hamburger-mobile {
-		
 	/* Positioning */
 	position: absolute;
 	top: 20px;

@@ -122,8 +122,9 @@
 
 			.file-data {
 				display: block;
+				margin-bottom: 15px;
 				margin-right: 0;
-				padding: 0 0 20px;
+				padding: 0;
 
 				&.grid-30 {
 					width: 100%;
@@ -150,8 +151,30 @@
 				}
 
 				h3 {
-					font-size: 32px;
-					font-weight: normal;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+@include tablet {
+
+	.acf-file-section {
+		padding: 30px;
+
+		.acf-file-cta {
+			padding: 20px;
+
+			.file-info {
+				display: block;
+				margin-right: 0;
+
+				&.grid-70 {
+					width: 100%;
+				}
+
+				h3 {
+					font-size: 26px;
 					padding-bottom: 20px;
 				}
 			}
@@ -285,6 +308,7 @@
 		}
 
 		.paragraph {
+			margin-bottom: 15px;
 			padding: 15px;
 		}
 
@@ -318,6 +342,14 @@
 			}
 		}
 	}
+}
+
+@include laptop {
+
+	ul.acf-schiiler {
+		padding: 0 20px;
+	}
+
 }
 
 
