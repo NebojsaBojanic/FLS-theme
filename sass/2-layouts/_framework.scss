@@ -145,42 +145,27 @@ header {
 
 
 
-
 .paragraph {
 	padding-right: 10%;
-	h2 {
+}
+.paragraph-2 {
+	padding-left: 10%;
+}
 
-		color:#0072bc;
+.paragraph,
+.paragraph-2 {
+	h2 {
 		font-size:40px;
 		font-weight:300;
 		letter-spacing: 0.07em;
 		line-height:1.3;
-
 	}
 
 	p {
-
-		font-size:20px;
-		line-height:28px;
-		font-weight:300;
 		color:$base-font-color;
-	}
-}
-
-.paragraph-2 {
-	padding-left: 10%;
-	h2 {
-		font-size:40px;
-		line-height:1.3;
-		color:#0072bc;
-		letter-spacing:0.15em;
-		font-weight:300;
-	}
-	p {
 		font-size:20px;
-		line-height:28px;
 		font-weight:300;
-		color:$base-font-color;
+		line-height:28px;
 	}
 }
 
@@ -304,19 +289,6 @@ th {
 .alignBottom {
 	vertical-align: bottom
 }
-
-
-blockquote {
-	border-left: 1px solid #aaa;
-	color: #999;
-	font-size: 22px;
-	font-style:italic;
-	line-height:27px;
-	margin-bottom: 25px;
-	padding:20px;
-	text-align: center;
-}
-
 
 .socialMedia {
 	padding-bottom: 25px;
@@ -465,8 +437,8 @@ ol {
 
 /* ##########################################################################
  ################################# Text colors ################################ */
-.text-beige {
-	color: $textBeige;
+.text-light-blue {
+	color: $textArctic;
 }
 .text-black {
 	color: $textBlack;
@@ -474,32 +446,26 @@ ol {
 .text-blue {
 	color: $textBlue;
 }
-.text-brown {
-	color: $textBrown;
+.text-butterscotch-yellow {
+	color: $textButterscotch;
 }
-.text-dark-grey {
-	color: $textDarkGrey;
+.text-charcoal {
+	color: $textCharcoal;
 }
-.text-dark-kaki {
-	color: $textDarkKaki;
+.text-egg-nog {
+	color: $textEggNog;
 }
-.text-grey {
-	color: $textGrey;
+.text-fossil-grey {
+	color: $textFossilGrey;
 }
-.text-green {
-	color: $textGreen;
+.text-mauve {
+	color: $textMauve;
 }
-.text-light-blue {
-	color: $textLightBlue;
+.text-ocean-green {
+	color: $textOceanGreen;
 }
-.text-light-grey {
-	color: $textLightGrey;
-}
-.text-orange {
-	color: $textOrange;
-}
-.text-purple {
-	color: $textPurple;
+.text-peanut {
+	color: $textPeanut;
 }
 .text-red {
 	color: $textRed;
@@ -507,11 +473,11 @@ ol {
 .text-salmon {
 	color: $textSalmon;
 }
-.text-turquoise {
-	color: $textTurquoise;
+.text-shadow-grey {
+	color: $textShadowGrey;
 }
-.text-violet {
-	color: $textViolet;
+.text-teal {
+	color: $textTeal;
 }
 .text-white {
 	color: $textWhite;
@@ -519,35 +485,35 @@ ol {
 
 /* ##########################################################################
  ############################# Background colors ############################## */
+.bg-apricot {
+	background-color: $bgApricot;
+}
 .bg-black {
 	background-color: $bgBlack;
 }
 .bg-blue {
 	background-color: $bgBlue;
 }
+.bg-bubblegum {
+	background-color: $bgBubblegum;
+}
+.bg-crimson {
+	background-color: $bgCrimson;
+}
 .bg-green {
 	background-color: $bgGreen;
 }
-.bg-grey {
-	background-color: $bgGrey;
-}
-.bg-light-blue {
-	background-color: $bgLightBlue;
-}
-.bg-kaki {
-	background-color: $bgKaki;
-}
-.bg-orange {
-	background-color: $bgOrange;
+.bg-ocean {
+	background-color: $bgOcean;
 }
 .bg-purple {
 	background-color: $bgPurple;
 }
-.bg-red {
-	background-color: $bgRed;
+.bg-sage {
+	background-color: $bgSage;
 }
-.bg-violet {
-	background-color: $bgViolet;
+.bg-sand {
+	background-color: $bgSand;
 }
 .bg-white {
 	background-color: #FFF;
@@ -558,26 +524,29 @@ ol {
 
 /* #######################################################################################
  ################################# Butons Background colors ################################ */
-.button-blue {
-	@include fls-button-theme($buttonBlue);
+.button-aegean {
+	@include fls-button-theme($buttonAegean);
 }
-.button-green {
-	@include fls-button-theme($buttonGreen);
+.button-black {
+	@include fls-button-theme($buttonBlack);
+}
+.button-candy {
+	@include fls-button-theme($buttonCandyRed);
+}
+.button-honey {
+	@include fls-button-theme($buttonHoney);
 }
 .button-light-blue {
 	@include fls-button-theme($buttonLightBlue);
 }
-.button-brown {
-	@include fls-button-theme($buttonBrown);
+.button-peanut {
+	@include fls-button-theme($buttonPeanut);
 }
-.button-orange {
-	@include fls-button-theme($buttonOrange);
+.button-pear {
+	@include fls-button-theme($buttonPear);
 }
 .button-purple {
 	@include fls-button-theme($buttonPurple);
-}
-.button-red {
-	@include fls-button-theme($buttonRed);
 }
 .button-salmon {
 	@include fls-button-theme($buttonSalmon);
@@ -585,12 +554,13 @@ ol {
 .button-sky-blue {
 	@include fls-button-theme($buttonSkyBlue);
 }
-.button-turquoise {
-	@include fls-button-theme($buttonTurquoise);
+.button-teal {
+	@include fls-button-theme($buttonTeal);
 }
 .button-white {
 	@include fls-button-theme(#ffffff);
 }
+
 
 /* #######################################################################################
  ######################################## Patterns ######################################### */

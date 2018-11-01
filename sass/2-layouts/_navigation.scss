@@ -79,26 +79,37 @@
 				color: white;
 			}
 
-			&.button-blue {
-				border-color: $buttonBlue;
-				@include secondary-button-theme($buttonBlue);
+			&.button-aegean {
+				border-color: $buttonAegean;
+				@include secondary-button-theme($buttonAegean);
 
 				&.current-menu-item {
 					background-color: #FFF;
 					
 					a {
-						color: $buttonBlue;
+						color: $buttonAegean;
 					}
 				}
 			}
-			&.button-green {
-				border-color: $buttonGreen;
-				@include secondary-button-theme($buttonGreen);
+			&.button-candy {
+				border-color: $buttonCandyRed;
+				@include secondary-button-theme($buttonCandyRed);
 				&.current-menu-item {
 					background-color: #FFF;
 					
 					a {
-						color: $buttonGreen;
+						color: $buttonCandyRed;
+					}
+				}
+			}
+			&.button-honey {
+				border-color: $buttonHoney;
+				@include secondary-button-theme($buttonHoney);
+				&.current-menu-item {
+					background-color: #FFF;
+					
+					a {
+						color: $buttonHoney;
 					}
 				}
 			}
@@ -113,25 +124,25 @@
 					}
 				}
 			}
-			&.button-brown {
-				border-color: $buttonBrown;
-				@include secondary-button-theme($buttonBrown);
+			&.button-peanut {
+				border-color: $buttonPeanut;
+				@include secondary-button-theme($buttonPeanut);
 				&.current-menu-item {
 					background-color: #FFF;
 					
 					a {
-						color: $buttonBrown;
+						color: $buttonPeanut;
 					}
 				}
 			}
-			&.button-orange {
-				border-color: $buttonOrange;
-				@include secondary-button-theme($buttonOrange);
+			&.button-pear {
+				border-color: $buttonPear;
+				@include secondary-button-theme($buttonPear);
 				&.current-menu-item {
 					background-color: #FFF;
 					
 					a {
-						color: $buttonOrange;
+						color: $buttonPear;
 					}
 				}
 			}
@@ -143,17 +154,6 @@
 					
 					a {
 						color: $buttonPurple;
-					}
-				}
-			}
-			&.button-red {
-				border-color: $buttonRed;
-				@include secondary-button-theme($buttonRed);
-				&.current-menu-item {
-					background-color: #FFF;
-					
-					a {
-						color: $buttonRed;
 					}
 				}
 			}
@@ -179,14 +179,14 @@
 					}
 				}
 			}
-			&.button-turquoise {
-				border-color: $buttonTurquoise;
-				@include secondary-button-theme($buttonTurquoise);
+			&.button-teal {
+				border-color: $buttonTeal;
+				@include secondary-button-theme($buttonTeal);
 				&.current-menu-item {
 					background-color: #FFF;
 					
 					a {
-						color: $buttonTurquoise;
+						color: $buttonTeal;
 					}
 				}
 			}
@@ -281,33 +281,37 @@
 				}
 			}
 
-			&.button-blue {
-				border-color: $buttonBlue;
-				@include secondary-button-theme($buttonBlue);
+			&.button-aegean {
+				border-color: $buttonAegean;
+				@include secondary-button-theme($buttonAegean);
 			}
-			&.button-green {
-				border-color: $buttonGreen;
-				@include secondary-button-theme($buttonGreen);
+			&.button-candy {
+				border-color: $buttonCandyRed;
+				@include secondary-button-theme($buttonCandyRed);
+			}
+			&.button-honey {
+				border-color: $buttonHoney;
+				@include secondary-button-theme($buttonHoney);
+			}
+			&.button-light-blue {
+				border-color: $buttonHoney;
+				@include secondary-button-theme($buttonHoney);
 			}
 			&.button-light-blue {
 				border-color: $buttonLightBlue;
 				@include secondary-button-theme($buttonLightBlue);
 			}
-			&.button-brown {
-				border-color: $buttonBrown;
-				@include secondary-button-theme($buttonBrown);
+			&.button-peanut {
+				border-color: $buttonPeanut;
+				@include secondary-button-theme($buttonPeanut);
 			}
-			&.button-orange {
-				border-color: $buttonOrange;
-				@include secondary-button-theme($buttonOrange);
-			}
-			&.button-purple {
-				border-color: $buttonPurple;
-				@include secondary-button-theme($buttonPurple);
+			&.button-pear {
+				border-color: $buttonPear;
+				@include secondary-button-theme($buttonPear);
 			}
 			&.button-red {
-				border-color: $buttonRed;
-				@include secondary-button-theme($buttonRed);
+				border-color: $buttonPurple;
+				@include secondary-button-theme($buttonPurple);
 			}
 			&.button-salmon {
 				border-color: $buttonSalmon;
@@ -317,9 +321,9 @@
 				border-color: $buttonSkyBlue;
 				@include secondary-button-theme($buttonSkyBlue);
 			}
-			&.button-turquoise {
-				border-color: $buttonTurquoise;
-				@include secondary-button-theme($buttonTurquoise);
+			&.button-teal {
+				border-color: $buttonTeal;
+				@include secondary-button-theme($buttonTeal);
 			}
 		}
 	}
@@ -418,26 +422,37 @@
 						color: white;
 					}
 
-					&.button-blue {
-						border-color: $buttonBlue;
-						@include secondary-button-theme($buttonBlue);
+					&.button-aegean {
+						border-color: $buttonAegean;
+						@include secondary-button-theme($buttonAegean);
 
 						&.current-menu-item {
 							background-color: #FFF;
 							
 							a {
-								color: $buttonBlue;
+								color: $buttonAegean;
 							}
 						}
 					}
-					&.button-green {
-						border-color: $buttonGreen;
-						@include secondary-button-theme($buttonGreen);
+					&.button-candy {
+						border-color: $buttonCandyRed;
+						@include secondary-button-theme($buttonCandyRed);
 						&.current-menu-item {
 							background-color: #FFF;
 							
 							a {
-								color: $buttonGreen;
+								color: $buttonCandyRed;
+							}
+						}
+					}
+					&.button-honey {
+						border-color: $buttonHoney;
+						@include secondary-button-theme($buttonHoney);
+						&.current-menu-item {
+							background-color: #FFF;
+							
+							a {
+								color: $buttonHoney;
 							}
 						}
 					}
@@ -452,29 +467,29 @@
 							}
 						}
 					}
-					&.button-brown {
-						border-color: $buttonBrown;
-						@include secondary-button-theme($buttonBrown);
+					&.button-peanut {
+						border-color: $buttonPeanut;
+						@include secondary-button-theme($buttonPeanut);
 						&.current-menu-item {
 							background-color: #FFF;
 							
 							a {
-								color: $buttonBrown;
+								color: $buttonPeanut;
 							}
 						}
 					}
-					&.button-orange {
-						border-color: $buttonOrange;
-						@include secondary-button-theme($buttonOrange);
+					&.button-pear {
+						border-color: $buttonPear;
+						@include secondary-button-theme($buttonPear);
 						&.current-menu-item {
 							background-color: #FFF;
 							
 							a {
-								color: $buttonOrange;
+								color: $buttonPear;
 							}
 						}
 					}
-					&.button-purple {
+					&.button-red {
 						border-color: $buttonPurple;
 						@include secondary-button-theme($buttonPurple);
 						&.current-menu-item {
@@ -482,17 +497,6 @@
 							
 							a {
 								color: $buttonPurple;
-							}
-						}
-					}
-					&.button-red {
-						border-color: $buttonRed;
-						@include secondary-button-theme($buttonRed);
-						&.current-menu-item {
-							background-color: #FFF;
-							
-							a {
-								color: $buttonRed;
 							}
 						}
 					}
@@ -518,14 +522,14 @@
 							}
 						}
 					}
-					&.button-turquoise {
-						border-color: $buttonTurquoise;
-						@include secondary-button-theme($buttonTurquoise);
+					&.button-teal {
+						border-color: $buttonTeal;
+						@include secondary-button-theme($buttonTeal);
 						&.current-menu-item {
 							background-color: #FFF;
 							
 							a {
-								color: $buttonTurquoise;
+								color: $buttonTeal;
 							}
 						}
 					}
@@ -583,7 +587,7 @@
 		width: 100%;
 		opacity: 1;
 		left: 0;
-		@include box-shadow (2);
+		@include box-shadow (1);
 		@include rotate (0deg);
 		@include trans(.25s ease-in-out);
 		&:nth-child(1) {
