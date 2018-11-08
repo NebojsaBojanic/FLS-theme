@@ -95,6 +95,11 @@ footer {
 	padding-top: 80px;
 	width: 100%;
 }
+@include desktop {
+	footer {
+		padding-top: 40px;
+	}
+}
 
 header {
 	position:relative;
