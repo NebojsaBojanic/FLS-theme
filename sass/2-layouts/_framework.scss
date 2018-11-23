@@ -62,12 +62,12 @@
 	@include center-block;
 }
 
-@include tablet {
+/*@include tablet {
 	.grid-100 {
 		margin: 0 auto;
 		width: 90%;
 	}
-}
+}*/
 
 
 .fl {float: left;position: relative;}
@@ -160,9 +160,7 @@ header {
 .paragraph,
 .paragraph-2 {
 	h2 {
-		font-size:40px;
-		font-weight:300;
-		letter-spacing: 0.07em;
+		
 		line-height:1.3;
 	}
 
@@ -201,10 +199,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 section {
-
 	padding:50px 0;
 	overflow:hidden;
-
+}
+@include mobile {
+	section {
+		padding: 35px 0;
+	}
 }
 
 /* TABLE SETTINGS */
@@ -213,7 +214,6 @@ section {
 }
 
 .table {
-
 	border-collapse: collapse;
 	display: table;
 	font-family:$font-stack-serif;
@@ -223,11 +223,10 @@ section {
 	tr {
 
 		td {
-
 			border-left: 0;
 			border-right: 0;
 			color: #414042;
-			font-size:16px;
+			font-size: 16px;
 			padding: 12px 0;
 		}
 	}
@@ -235,24 +234,22 @@ section {
 }
 
 th {
-
 	border-bottom: 1px solid #101010;
 	border-top: 0;
 	color: #101010;
-	font-size: 13px;
-	letter-spacing: 0.2em;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.03em;
 	line-height: 1.275;
 	padding-bottom: 20px;
 	padding-top: 0;
 	text-align: left;
-	text-transform: uppercase;
 	@include font-antialiasing;
 
 }
 
 
 #top {
-
 	background: rgba(255,255,255,0.15) center no-repeat;
 	border: 2px solid $brand-blue-color;
 	border-radius: 4px;
@@ -266,17 +263,13 @@ th {
 	-moz-border-radius: 4px;
 
 	i {
-
 		color: #53b4e5;
 		display: block;
 		font-size: 15px;
 		line-height: 34px;
 		text-align: center;
 		vertical-align: middle;
-
 	}
-
-
 }
 
 .tableCell {
@@ -318,11 +311,13 @@ th {
 
 .mobileSocial {
 	padding:0 45px 15px 45px;
+
 	li {
 		i {
 			color:$brand-gray-color;
 		}
 	}
+
 	a {
 		color:$brand-gray-color;
 		display:inline-block;
@@ -344,6 +339,7 @@ ol {
 		padding: 0;
 		padding-bottom: 25px;
 		padding-right:35px;
+
 		&> {
 			li {
 				line-height:1.4;
@@ -363,17 +359,17 @@ ol {
 					width: 1em;
 				}
 				a {
-					color:$brand-gray-color;
+					color: $brand-gray-color;
 					position: relative;
 					text-decoration:none;
 					::after {
-					content: '';
-					position: absolute;
-					left: 0;
-					bottom: 0px;
-					width: 100%;
-					height: 1px !important;
-					background: #BABCBE
+						background: #BABCBE;
+						bottom: 0px;
+						content: '';
+						height: 1px !important;
+						left: 0;
+						position: absolute;
+						width: 100%;
 					}
 					&:hover {
 						&::after {
@@ -423,9 +419,6 @@ ol {
 	text-transform: uppercase;
 	@include trans(0.2s ease-in-out); 
 }
-
-
-// Addition by Nebojsa 
 
 .display-table {
 	display: table;

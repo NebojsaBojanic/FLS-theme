@@ -24,7 +24,12 @@
 		cursor: default;
 		opacity: 0.5; }
 	.owl-theme .owl-nav.disabled + .owl-dots {
-		margin-top: 10px; }
+		margin-top: 50px; }
+
+	@include laptop {
+		.owl-theme .owl-nav.disabled + .owl-dots {
+		margin-top: 30px; }
+	}
 
 	.owl-theme .owl-dots {
 		text-align: center;

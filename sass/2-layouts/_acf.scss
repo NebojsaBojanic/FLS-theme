@@ -9,7 +9,7 @@
 }
 
 .section-subtitle {
-	font-size: 2em;
+	font-size: 33px;
 	font-weight: 300;
 	letter-spacing: 0.03em;
 	line-height: 1.3em;
@@ -23,17 +23,17 @@
 }
 
 .acf-block {
-	margin: 50px auto;
+	margin: 0 auto 50px;
 }
 
 @include tablet {
 	.section-title {
 		font-size: 36px;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
 	.acf-block {
-		margin: 25px auto;
+		margin: 30px auto;
 	}
 }
 @include mobile {
@@ -61,7 +61,8 @@
 		.file-data {
 			display: inline-block;
 			margin-right: -4px;
-			text-align: center;
+			padding-right: 16px;
+			text-align: right;
 			vertical-align: middle;
 			width: 20%;
 			
@@ -82,6 +83,24 @@
 			h4 {
 				letter-spacing: 0.02em;
 				line-height: 1.5em;
+			}
+		}
+	}
+}
+@include tablet {
+	.acf-file {
+		a {
+			.file-data {
+				display: block;
+				margin-right: 0;
+				padding-right: 0;
+				text-align: center;
+				width: 100%;
+			}
+
+			.file-info {
+				display: block;
+				width: 100%;
 			}
 		}
 	}
@@ -139,7 +158,21 @@
 		}
 	}
 }
+.unsere {
+	.acf-file-section {
+		.acf-file-cta {
+			width: 80%;
+		}
+	}
+}
 @include desktop {
+	.unsere {
+		.acf-file-section {
+			.acf-file-cta {
+				width: 100%;
+			}
+		}
+	}
 	.acf-file-section {
 		.acf-file-cta {
 			.file-data {
@@ -202,6 +235,29 @@
 		}
 	}
 }
+@include mobile {
+	.acf-file-section {
+		padding: 10px;
+
+		.acf-file-cta {
+			padding: 10px;
+
+			.file-info {
+				display: block;
+				margin-right: 0;
+
+				&.grid-70 {
+					width: 100%;
+				}
+
+				h3 {
+					font-size: 26px;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+}
 
 
 
@@ -229,12 +285,51 @@
 			}
 		}
 
-		&.gallery-slide {
+		&.gallery-slide,
+		&.gallery-thumbnails {
 			display: none;
 
 			li {
 				width: 100%;
 			}
+		}
+	}
+}
+//arrows on first carousel
+#sync1 {
+	margin-bottom: 20px;
+}
+#sync2 {
+	margin: 0 auto;
+	width: 90%;
+
+	.owl-item {
+		cursor: pointer;
+		opacity: 0.5;
+
+		&.current {
+			opacity: 1;
+		}
+	}
+
+	&.owl-theme {
+		position: relative;
+
+		.owl-next,
+		.owl-prev {
+			width: 22px;
+			height: 30px;
+			margin-top: -20px;
+			position: absolute;
+			top: 50%;
+		}
+
+		.owl-prev {
+			left: -30px;
+		}
+
+		.owl-next {
+			right: -30px;
 		}
 	}
 }
@@ -244,7 +339,8 @@
 			&.grid-gallery {
 				display: none;
 			}
-			&.gallery-slide {
+			&.gallery-slide,
+			&.gallery-thumbnails {
 				display: block;
 			}
 		}
@@ -292,12 +388,28 @@
 		.paragraph-2 {
 			h2 {
 				font-size: 38px;
+				font-weight: 300;
 				padding-top: 0;
 			}
 		}
 
 		.fls-button {
 			margin-top: 40px;
+		}
+	}
+}
+
+.home
+.unsere {
+	.acf-paragraph-image {
+		.text-image-element {
+			.paragraph,
+			.paragraph-2 {
+				p {
+					font-size: 20px;
+					line-height: 30px;
+				}
+			}
 		}
 	}
 }
@@ -317,6 +429,7 @@
 			.paragraph {
 				margin-bottom: 25px;
 			}
+
 			.paragraph-2 {
 				margin-top: 25px;
 			}
@@ -324,7 +437,9 @@
 			.paragraph,
 			.paragraph-2 {
 				padding: 15px;
+
 				h2 {
+					font-size: 36px;
 					padding-bottom: 20px;
 				}
 			}
@@ -341,12 +456,12 @@
 
 		.text-image-element {
 			.paragraph {
-				margin-bottom: 15px;
+				margin-bottom: 30px;
 				padding: 10px;
 			}
 
 			.paragraph-2 {
-				margin-top: 15px;
+				margin-top: 30px;
 				padding: 10px;
 			}
 		}
@@ -417,7 +532,7 @@
 		}
 	}
 }
-@include laptop {
+@include desktop {
 	ul.acf-schiiler {
 		padding: 0 20px;
 	}
@@ -443,7 +558,7 @@
 		th,
 		td {
 			border: 1px solid $sidebarAlt;
-			padding: 5px;
+			padding: 8px 5px;
 		}
 	}
 }
@@ -473,6 +588,7 @@
 						border-bottom: 1px solid $sidebarAlt;
 						border-right: 1px solid $sidebarAlt;
 						display: inline-block;
+						font-weight: 400;
 						width: 50%;
 
 						&:nth-last-of-type(2),
@@ -581,8 +697,10 @@
 				text-align: left;
 
 				a {
+					letter-spacing: 0.03em;
+
 					&:hover {
-						text-decoration: underline;
+						font-weight: bold;
 					}
 				}
 			}
@@ -622,8 +740,14 @@
 @include mobile {
 	.acf-team {
 		ul.team-members {
+			margin: 30px auto;
+
 			li.acf-member {
-				margin-bottom: 50px;
+				margin-bottom: 30px;
+
+				&:nth-last-of-type(2) {
+					margin-bottom: 30px;
+				}
 
 				figure {
 					display: block;

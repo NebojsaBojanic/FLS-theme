@@ -13,9 +13,9 @@ header.home {
 	height:100%;
 }
 header.other-header {
-	padding-bottom: 210px;
+	padding-bottom: 170px;
 }
-@include laptop {
+@include desktop {
 	header.other-header {
 		padding-bottom: 70px;
 	}
@@ -95,10 +95,24 @@ header.other-header {
   content: "\e900";
 }
 
-
 .pipe {
 	padding: 0 7px;
 }
+
+.page-content-wrap {
+	padding: 50px 0;
+	width: 100%;
+}
+@include tablet {
+	.page-content-wrap {
+		margin: 0 auto;
+		padding: 30px 0;
+		width: 90%;
+	}
+}
+
+/* 1. Section one / Paragraph and image
+   ========================================================================== */
 
 .section-one {
 	margin: 100px 0;
@@ -115,7 +129,7 @@ header.other-header {
 }
 
 
-/* 1. Section offer/angebote
+/* 2. Section offer/angebote
    ========================================================================== */
 
 .offer {
@@ -210,7 +224,7 @@ header.other-header {
 
 
 
-/* 2. Section news
+/* 3. Section news
    ========================================================================== */
 
 .news {
@@ -278,7 +292,7 @@ header.other-header {
 		}
 		.newsCategory {
 			display: block;
-			font-size: 15px;
+			font-size: 14px;
 			margin-top: 5px;
 		
 			a {
@@ -367,7 +381,7 @@ header.other-header {
 
 
 
-/* 6. Post on every listing page
+/* 5. Post on every listing page
 	========================================================================== */
 
 .single-article {
@@ -434,12 +448,13 @@ header.other-header {
 
 
 
-/* 7. Blog
+/* 6. Blog
 	========================================================================== */
 
 
 .blog-wrap {
-	padding: 100px 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .aktuelles {
@@ -572,9 +587,19 @@ header.other-header {
 		}
 	}
 }
+@include laptop {
+	.aktuelles {
+		margin-right: 10%;
+
+		&.grid-55 {
+			width: 60%;
+		}
+	}
+}
 @include tablet {
 	.blog-wrap {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.aktuelles {
@@ -630,7 +655,7 @@ header.other-header {
 
 
 
-/* 	8. Nav2, Nav3, Nav4, Our Team single
+/* 	7. Nav2, Nav3, Nav4, Our Team single
 	========================================================================== */
 
 .nav {
@@ -685,6 +710,7 @@ header.other-header {
 
 	.team-member-info {
 		margin: 10px 0;
+		width: 80%;
 
 		p {
 			margin-top: 20px;
@@ -722,6 +748,10 @@ header.other-header {
 	}
 }
 @include laptop {
+	.nav {
+		padding: 0;
+	}
+
 	.nav-article,
 	.team-article {
 		margin-bottom: 50px;
@@ -742,10 +772,11 @@ header.other-header {
 			width: 70%;
 		}
 	}
-}
-@include mobile {
-	.nav {
-		padding: 0;
+
+	.team-single {
+		.team-member-info {
+			width: 100%;
+		}
 	}
 }
 @include mobile {
@@ -759,7 +790,7 @@ header.other-header {
 
 
 
-/* 	9. Termine
+/* 	8. Termine
 	========================================================================== */
 
 .wdc_calendar {
@@ -777,13 +808,14 @@ header.other-header {
 }
 
 
-/* 	10. Kontakt
+/* 	9. Kontakt
 	========================================================================== */
 
 .kontakt {
 	text-align: center;
 
 	.section-subtitle {
+		letter-spacing: 0.06em;
 		padding-bottom: 20px;
 	}
 
@@ -819,36 +851,20 @@ header.other-header {
 		}
 	}
 }
-
 @include tablet {
 	.kontakt {
 		.table {
 			display: block;
 
 			.table-cell {
-				display: inline-block;
-				margin: 10px -4px 10px 0;
-				min-height: 100px;
-				padding-bottom: 10px;
-				vertical-align: top;
-				width: 50%;
-
-				&:nth-of-type(2n) {
-					border: none;
-				}
-			}
-		}
-	}
-}
-@include tablet {
-	.kontakt {
-		.table {
-			.table-cell {
 				border: none;
 				border-bottom: 1px solid $textFossilGrey;
-				display: block;
+				display: inline-block;
 				margin: 10px 0;
-				width: 100%;
+				min-height: 100px;
+				padding: 10px 0;
+				vertical-align: top;
+				width: 60%;
 
 				&:nth-of-type(2n) {
 					border-bottom: 1px solid $textFossilGrey;
@@ -861,11 +877,51 @@ header.other-header {
 		}
 	}
 }
+@include smallMobile {
+	.kontakt {
+		.table {
+			.table-cell {
+				width: 100%;
+			}
+		}
+	}
+}
 
 
 
 
-  /* 404
+  /* 10. Impressum
+   ========================================================================== */
+
+.law-page {
+	padding-bottom: 100px;
+
+	h1 {
+		font-size: 36px;
+		margin: 50px 0;
+	}
+
+	h2 {
+		font-size: 20px;
+		font-weight: 600;
+		margin: 40px 0 20px;
+	}
+
+	h3 {
+		font-size: 18px;
+		font-weight: 600;
+		margin: 25px 0 10px;
+	}
+
+	p {
+		line-height: 1.5em;
+	}
+}
+
+
+
+
+  /* 11. 404
    ========================================================================== */
 
 .wrap-404 {
@@ -873,7 +929,24 @@ header.other-header {
 }
 
 .error-404 {
+	.error-404-heading {
+		font-size: 48px;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		line-height: 1.1em;
+		margin-bottom: 50px;
+		padding: 0;
+		text-align: center;
+
+		span {
+			font-size: 36px;
+			font-weight: 400;
+		}
+	}
+
 	ul {
+		text-align: center;
+
 		li {
 			margin-bottom: 5px;
 
@@ -891,7 +964,7 @@ header.other-header {
 
 
 
-  /* FOOTER
+  /* 12. FOOTER
    ========================================================================== */
 
 footer {
@@ -902,7 +975,8 @@ footer {
 	}
 
 	&.bg-apricot {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgApricot, 10%);
 			border-color: darken($bgApricot, 20%);
 		}
@@ -912,7 +986,8 @@ footer {
 		}
 	}
 	&.bg-black {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgBlack, 10%);
 			border-color: darken($bgBlack, 20%);
 		}
@@ -922,7 +997,8 @@ footer {
 		}
 	}
 	&.bg-blue {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgBlue, 10%);
 			border-color: darken($bgBlue, 20%);
 		}
@@ -932,7 +1008,8 @@ footer {
 		}
 	}
 	&.bg-bubblegum {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgBubblegum, 10%);
 			border-color: darken($bgBubblegum, 20%);
 		}
@@ -942,7 +1019,8 @@ footer {
 		}
 	}
 	&.bg-crimson {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgCrimson, 10%);
 			border-color: darken($bgCrimson, 20%);
 		}
@@ -952,7 +1030,8 @@ footer {
 		}
 	}
 	&.bg-greenbgGreen {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgGreen, 10%);
 			border-color: darken($bgGreen, 20%);
 		}
@@ -962,7 +1041,8 @@ footer {
 		}
 	}
 	&.bg-ocean {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgOcean, 10%);
 			border-color: darken($bgOcean, 20%);
 		}
@@ -972,7 +1052,8 @@ footer {
 		}
 	}
 	&.bg-purple {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgPurple, 10%);
 			border-color: darken($bgPurple, 20%);
 		}
@@ -982,7 +1063,8 @@ footer {
 		}
 	}
 	&.bg-sage {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgSage, 10%);
 			border-color: darken($bgSage, 20%);
 		}
@@ -992,7 +1074,8 @@ footer {
 		}
 	}
 	&.bg-sand {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgSand, 10%);
 			border-color: darken($bgSand, 20%);
 		}
@@ -1002,7 +1085,8 @@ footer {
 		}
 	}
 	&.bg-white {
-		address {
+		address,
+		.w-calendar {
 			background-color: darken(#FFF, 10%);
 			border-color: darken(#FFF, 20%);
 		}
@@ -1012,7 +1096,8 @@ footer {
 		}
 	}	
 	&.bg-yellow {
-		address {
+		address,
+		.w-calendar {
 			background-color: lighten($bgYellow, 10%);
 			border-color: darken($bgYellow, 20%);
 		}
@@ -1037,6 +1122,7 @@ footer {
 			color: #534a31;
 			font-size: 17px;
 			font-weight: bold;
+			letter-spacing: 0.03em;
 			padding: 5px;
 			text-align: left;
 
@@ -1044,6 +1130,7 @@ footer {
 				color: #6e6241;
 				font-size: 16px;
 				font-weight: 300;
+				letter-spacing: normal;
 			}
 		}
 	}
@@ -1051,8 +1138,9 @@ footer {
  	h5 {
 	 	color: $footerSocialMediaHeading;
 	 	font-size: 36px;
-	 	font-weight:300;
-	 	line-height:1.3;
+	 	font-weight: 300;
+	 	letter-spacing: 0.03em;
+	 	line-height: 1.3;
 	 	margin-bottom: 20px;
 	}
 
@@ -1108,6 +1196,10 @@ footer {
 }
 
 .w-calendar {
+	border: 2px dashed;
+	display: inline-block;
+	padding: 20px;
+
 	div {
 		margin: 0 auto;
 	}

@@ -5,7 +5,6 @@
 	right: 5%;
 
 	nav {
-
 		li {
 			/* Display & Box Model */ 
 			display: inline;
@@ -26,7 +25,6 @@
 				font-size:15px;
 				font-weight:300;
 				letter-spacing: 0.15em;
-
 				padding: 10px 0;
 			}
 		}
@@ -44,7 +42,6 @@
 .fixedMenu,
 .stickyMenu {
 	background: #fff;
-	padding: 20px;
 	position: fixed;
 	text-align: center;
 	top: 0;
@@ -55,8 +52,6 @@
 	li {
 		display: inline-block;
 		vertical-align: middle;
-		margin-right: 8px;
-
 		/* Other */
 		font-family:$font-stack-sans-serif;
 		text-transform: uppercase;
@@ -74,6 +69,11 @@
 
 		&.meta-btn {
 			border: 2px solid grey;
+			margin-right: 8px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
 
 			a {
 				color: white;
@@ -229,7 +229,6 @@
 			font-size:$base-font-size;
 			letter-spacing:0.1em;
 			margin-right: 15px;
-			max-width: 22%;
 			vertical-align: middle;
 			@include trans(0.2s ease-in-out); 
 
@@ -329,7 +328,7 @@
 	}
 }
 	 
-@include laptop {
+@include desktop {
 
 	.fixedMenu,
 	.stickyMenu.is-sticky,
@@ -341,7 +340,6 @@
 		bottom: 0;
 
 		ul {
-
 			li.menu-item {
 				display: block;
 				margin-right: 1%;
@@ -358,7 +356,7 @@
 	}
 }
 
-				
+
 //Hamburger Menu
 
 #slideMenu {
@@ -587,7 +585,7 @@
 		width: 100%;
 		opacity: 1;
 		left: 0;
-		@include box-shadow (1);
+		//@include box-shadow (1);
 		@include rotate (0deg);
 		@include trans(.25s ease-in-out);
 		&:nth-child(1) {
@@ -631,9 +629,7 @@
 
 
 @include desktop {
-
 	.hamburger-mobile {
 		display: block;
 	}
-
 }
