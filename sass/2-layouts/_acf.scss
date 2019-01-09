@@ -29,11 +29,11 @@
 @include tablet {
 	.section-title {
 		font-size: 36px;
-		margin-bottom: 20px;
+		margin-bottom: 17px;
+		padding: 0 20px;
 	}
-
-	.acf-block {
-		margin: 30px auto;
+	.section-subtitle {
+		padding: 0 20px;
 	}
 }
 @include mobile {
@@ -44,7 +44,12 @@
 
 	.section-description {
 		margin-bottom: 30px;
+		padding: 0 20px;
 		width: 100%;
+	}
+
+	.acf-block {
+		margin-bottom: 30px;
 	}
 }
 
@@ -87,8 +92,20 @@
 		}
 	}
 }
+.formulare {
+	.acf-file {
+		a {
+			.file-data {
+				text-align: left;
+				width: auto;
+			}
+		}
+	}
+}
 @include tablet {
 	.acf-file {
+		padding: 0 20px;
+
 		a {
 			.file-data {
 				display: block;
@@ -101,6 +118,25 @@
 			.file-info {
 				display: block;
 				width: 100%;
+
+				h4 {
+					text-align: center;
+				}
+			}
+		}
+	}
+	.formulare {
+		.acf-file {
+			a {
+				.file-data {
+					margin-bottom: 10px;
+					text-align: center;
+					width: auto;
+				}
+
+				.file-info {
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -113,6 +149,7 @@
 
 	.acf-file-cta {
 		border: 2px solid #fff;
+		max-width: 1160px;
 		padding: 25px;
 		width: 100%;
 
@@ -220,16 +257,10 @@
 			padding: 20px;
 
 			.file-info {
-				display: block;
-				margin-right: 0;
-
-				&.grid-70 {
-					width: 100%;
-				}
-
 				h3 {
 					font-size: 26px;
 					padding-bottom: 20px;
+					text-align: center;
 				}
 			}
 		}
@@ -317,23 +348,38 @@
 
 		.owl-next,
 		.owl-prev {
-			width: 22px;
+			background: none;
+			bottom: 0;
 			height: 30px;
-			margin-top: -20px;
+			margin: auto;
 			position: absolute;
-			top: 50%;
+			top: 0;
+			width: 22px;
 		}
 
 		.owl-prev {
 			left: -30px;
+
+			svg {
+				display: block;
+				width: 100%;
+			}
 		}
 
 		.owl-next {
 			right: -30px;
+
+			svg {
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 }
 @include tablet {
+	#sync2 {
+		width: 80%;
+	}
 	.acf-gallery {
 		ul {
 			&.grid-gallery {
@@ -344,6 +390,21 @@
 				display: block;
 			}
 		}
+	}
+}
+
+
+
+.acf-image {
+	max-width: 1160px;
+
+	figure {
+		text-align: center;
+	}
+}
+@include tablet {
+	.acf-image {
+		padding: 0 20px;
 	}
 }
 
@@ -375,20 +436,37 @@
 		}
 	}
 }
+@include tablet {
+	.acf-ordered-list {
+		padding: 0 20px;
+	}
+}
 
 
 
 .acf-paragraph-image {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
+
 	.text-image-element {
 		display: inline-block;
 		margin-right: -4px;
 		vertical-align: top;
+
+		.paragraph {
+			padding-right: 10%;
+		}
+		.paragraph-2 {
+			padding-left: 10%;
+		}
 
 		.paragraph,
 		.paragraph-2 {
 			h2 {
 				font-size: 38px;
 				font-weight: 300;
+				line-height:1.3;
 				padding-top: 0;
 			}
 		}
@@ -399,7 +477,7 @@
 	}
 }
 
-.home
+.home,
 .unsere {
 	.acf-paragraph-image {
 		.text-image-element {
@@ -411,11 +489,6 @@
 				}
 			}
 		}
-	}
-}
-@include desktop {
-	.acf-paragraph-image {
-		padding: 0 20px;
 	}
 }
 @include tablet {
@@ -452,8 +525,6 @@
 }
 @include mobile {
 	.acf-paragraph-image {
-		padding: 0;
-
 		.text-image-element {
 			.paragraph {
 				margin-bottom: 30px;
@@ -564,6 +635,8 @@
 }
 @include tablet {
 	.acf-table {
+		padding: 0 20px;
+
 		table {
 			margin: 0 auto;
 			width: 100%;
@@ -768,6 +841,12 @@
 						li {
 							margin-right: 5px;
 							width: 45px;
+
+							a {
+								img {
+									width: 90%;
+								}
+							}
 						}
 					}
 				}
@@ -779,24 +858,26 @@
 
 
 .acf-text-only {
-	width: 60%;
+	max-width: 1160px;
 }
-.formulare {
+@include desktop {
 	.acf-text-only {
-		width: 80%;
+		padding: 0 20px;
+	}
+
+	.formulare {
+		.acf-text-only {
+			padding: 0;
+		}
 	}
 }
 @include tablet {
-	.acf-text-only {
-		width: 80%;
+	.formulare {
+		.acf-text-only {
+			padding: 0 20px;
+		}
 	}
 }
-@include mobile {
-	.acf-text-only {
-		width: 100%;
-	}
-}
-
 
 
 .acf-two-column-text {
@@ -812,10 +893,6 @@
 }
 @include tablet {
 	.acf-two-column-text {
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
-
 		> div {
 			&.grid-50 {
 				width: 100%;
@@ -830,11 +907,6 @@
 				padding-left: 0;
 			}
 		}
-	}
-}
-@include mobile {
-	.acf-two-column-text {
-		width: 100%;
 	}
 }
 
@@ -865,10 +937,17 @@
 		}
 	}
 }
+@include tablet {
+	.acf-unordered-list {
+		padding: 0 20px;
+	}
+}
 
 
 
 .acf-video {
+	max-width: 1160px;
+
 	.embed-container { 
 		height: auto;
 		max-width: 100%;

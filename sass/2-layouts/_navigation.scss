@@ -35,7 +35,7 @@
 // Sticky Main Navigation
 
 .stickyMenu {
-	display: none;
+	margin-top: -166px;
 	opacity: 0;
 }
 
@@ -205,8 +205,8 @@
 }
 
 .is-sticky {
+	margin-top: 0;
 	opacity: 1;
-	display: block;
 }
 
  //Secondary Navigation
@@ -252,7 +252,7 @@
 				display: inline-block;
 				font-size:24px;
 				font-weight: normal;
-				padding: 10px 20px;
+				padding: 12px 20px;
 				position: relative;
 				text-decoration: none;
 				width: 100%;
@@ -268,15 +268,15 @@
 					right: 0;
 					border-radius: 0px;
 					@include trans(0.2s ease-in-out); 
-				} 
+				}
 				span {
 					&:first-child {
 						margin-right: 15px;
 					}
 				}
 				img {
-					height: 60px;
-					width: 60px;
+					height: 55px;
+					width: 55px;
 				}
 			}
 
@@ -327,14 +327,16 @@
 		}
 	}
 }
-	 
 @include desktop {
 
 	.fixedMenu,
+	.stickyMenu,
 	.stickyMenu.is-sticky,
 	.mainNav {
 		display: none;
 	}
+}
+@include laptop {
 
 	.secondaryNav {
 		bottom: 0;
@@ -347,8 +349,15 @@
 				width: 100%;
 
 				a {
+					padding: 6px 20px;
+
 					i._mi {
 						margin-right: 5px;
+					}
+
+					img {
+						height: 29px;
+						width: 26px;
 					}
 				}
 			}

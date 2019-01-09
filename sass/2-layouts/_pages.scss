@@ -38,15 +38,12 @@ header.other-header {
 	top: 0;
 	z-index:1000;
 	img {
-		width: 85%;
+		width: 65%;
 	}
 }
-@include mobile {
+@include laptop {
 	.fls-badge {
 		left: 10px;
-		img {
-			width: 70%;
-		}
 	}
 }
 
@@ -107,7 +104,6 @@ header.other-header {
 	.page-content-wrap {
 		margin: 0 auto;
 		padding: 30px 0;
-		width: 90%;
 	}
 }
 
@@ -155,10 +151,18 @@ header.other-header {
 
 					&.owl-prev {
 						left: -50px;
+
+						svg {
+							margin-right: 5px;
+						}
 					}
 
 					&.owl-next {
 						right: -50px;
+
+						svg {
+							margin-left: 5px;
+						}
 					}
 				}
 			}
@@ -414,6 +418,42 @@ header.other-header {
 		margin: 30px 0 40px;
 	}
 }
+
+.all-posts {
+	.single-article {
+		figure {
+			margin-right: 10%;
+		}
+	}
+}
+
+@include laptop {
+	.all-posts {
+		.grid-70 {
+			width: 90%;
+		}
+	}
+}
+@include tablet {
+	.all-posts {
+		.single-article {
+			figure {
+				margin-bottom: 20px;
+				margin-right: 0;
+
+				&.grid-40 {
+					width: 100%;
+				}
+			}
+
+			.post-content {
+				&.grid-50 {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
 @include mobile {
 	.single-article {
 		margin-bottom: 40px;
@@ -430,20 +470,30 @@ header.other-header {
 			margin: 20px 0;
 		}
 	}
-}
 
-
-.all-posts {
-	
-	.single-article {
-		
-		figure {
-			margin-right: 10%;
+	.all-posts {
+		.single-article {
+			figure {
+				margin-right: 10%;
+			}
 		}
-
 	}
-
 }
+
+
+
+
+/* 6. Download Forms
+	========================================================================== */
+
+@include tablet {
+	.formulare {
+		.grid-60 {
+			width: 100%;
+		}
+	}
+}
+
 
 
 
@@ -457,12 +507,22 @@ header.other-header {
 	padding-right: 20px;
 }
 
+.blog {
+	.search-results {
+		.back-to-home {
+			display: block;
+			padding: 20px 0;
+			text-decoration: underline;
+		}
+	}
+}
+
 .aktuelles {
 	margin-right: 15%;
 	padding: 0;
 }
 
-.sidebar-widget {
+.blog-sidebar-widgets {
 	margin-bottom: 70px;
 
 	.sidebar-subtitle {
@@ -470,7 +530,7 @@ header.other-header {
 		font-weight: 400;
 		letter-spacing: 0.03em;
 		line-height: 1.3em;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 	ul {
@@ -485,44 +545,40 @@ header.other-header {
 			}
 		}
 	}
+}
 
-	&.w-most-popular-posts {
-		ul {
-			li {
-				a {
-					vertical-align: middle;
+ul.wpp-list {
+	li {
+		a {
+			vertical-align: middle;
 
-					&:nth-of-type(1) {
-						max-width: 40%;
-					}
+			&:nth-of-type(1) {
+				max-width: 40%;
+			}
 
-					&:nth-of-type(2) {
-						max-width: 55%;
-					}
+			&:nth-of-type(2) {
+				max-width: 55%;
+			}
 
-					.wpp-thumbnail {
-						margin-right: 5%;
-					}
-				}
+			.wpp-thumbnail {
+				margin-right: 10px;
 			}
 		}
 	}
+}
 
-	&.w-tags {
-		.tagcloud {
-			a {
-				background-color: lighten($sidebarAlt, 10%);
-				display: inline-block;
-				font-size: 14px!important;
-				font-weight: 400;
-				margin-right: 2px;
-				margin-top: 2px;
-				padding: 4px 8px;
+.tagcloud {
+	a {
+		background-color: lighten($sidebarAlt, 10%);
+		display: inline-block;
+		font-size: 14px!important;
+		font-weight: 400;
+		margin-right: 2px;
+		margin-top: 2px;
+		padding: 4px 8px;
 
-				img {
-					margin-right: 10px;
-				}
-			}
+		img {
+			margin-right: 10px;
 		}
 	}
 }
@@ -539,7 +595,7 @@ header.other-header {
 		vertical-align: middle;
 		width: 80%;
 	}
-
+		
 	button {
 		display: inline-block;
 		margin-right: -4px;
@@ -575,6 +631,11 @@ header.other-header {
 
 .content-pagination {
 	margin-top: 50px;
+
+	h3 {
+		margin-bottom: 15px;
+		text-align: center;
+	}
 
 	div {
 		max-width: 50%;
@@ -622,7 +683,6 @@ header.other-header {
 	}
 
 	.sidebar-widget {
-
 		.sidebar-subtitle {
 			margin-bottom: 15px;
 		}
@@ -670,7 +730,13 @@ header.other-header {
 .nav-right-sidebar {
 	padding-top: 66px;
 
+	h3 {
+		font-weight: 300;
+	}
+
 	ul {
+		margin-top: 10px;
+
 		li {
 			border-bottom: 1px solid $sidebarAlt;
 			display: block;
@@ -773,6 +839,10 @@ header.other-header {
 		}
 	}
 
+	.nav1-text {
+		width: 80%;
+	}
+
 	.team-single {
 		.team-member-info {
 			width: 100%;
@@ -784,6 +854,10 @@ header.other-header {
 		&.grid-30 {
 			width: 90%;
 		}
+	}
+
+	.nav1-text {
+		width: 100%;
 	}
 }
 
@@ -816,12 +890,14 @@ header.other-header {
 
 	.section-subtitle {
 		letter-spacing: 0.06em;
-		padding-bottom: 20px;
+		padding-bottom: 28px;
 	}
 
 	p {
 		font-size: 14px;
 		line-height: 1.5em;
+		margin: 0 auto 8px;
+		width: 90%;
 
 		&.contact-info-title {
 			font-size: 1.2em;
@@ -830,11 +906,15 @@ header.other-header {
 			text-transform: uppercase;
 		}
 
-		&.contant-info {
+		&.contact-info {
 			font-weight: bolder;
 
-			a {
-				text-decoration: underline;
+			&.contact-email {
+				font-weight: 600;
+			}
+
+			span {
+				padding: 0 5px;
 			}
 		}
 	}
@@ -896,7 +976,7 @@ header.other-header {
 .law-page {
 	padding-bottom: 100px;
 
-	h1 {
+	.section-title {
 		font-size: 36px;
 		margin: 50px 0;
 	}
@@ -904,17 +984,28 @@ header.other-header {
 	h2 {
 		font-size: 20px;
 		font-weight: 600;
-		margin: 40px 0 20px;
+		margin: 50px 0;
+		padding: 0;
 	}
 
 	h3 {
 		font-size: 18px;
 		font-weight: 600;
-		margin: 25px 0 10px;
+		margin: 15px 0;
 	}
 
 	p {
 		line-height: 1.5em;
+		margin-bottom: 15px;
+	}
+}
+@include laptop {
+	.law-page {
+		padding: 0 20px 50px;
+
+		h2 {
+			margin: 30px 0;
+		}
 	}
 }
 
@@ -924,13 +1015,9 @@ header.other-header {
   /* 11. 404
    ========================================================================== */
 
-.wrap-404 {
-
-}
-
 .error-404 {
 	.error-404-heading {
-		font-size: 48px;
+		font-size: 60px;
 		font-weight: 600;
 		letter-spacing: 0.06em;
 		line-height: 1.1em;
@@ -948,13 +1035,13 @@ header.other-header {
 		text-align: center;
 
 		li {
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 
 			a {
-				text-decoration: underline;
+				text-decoration: none;
 
 				&:hover {
-					text-decoration: none;
+					text-decoration: underline;
 				}
 			}
 		}
@@ -976,7 +1063,7 @@ footer {
 
 	&.bg-apricot {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgApricot, 10%);
 			border-color: darken($bgApricot, 20%);
 		}
@@ -987,7 +1074,7 @@ footer {
 	}
 	&.bg-black {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgBlack, 10%);
 			border-color: darken($bgBlack, 20%);
 		}
@@ -998,7 +1085,7 @@ footer {
 	}
 	&.bg-blue {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgBlue, 10%);
 			border-color: darken($bgBlue, 20%);
 		}
@@ -1009,7 +1096,7 @@ footer {
 	}
 	&.bg-bubblegum {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgBubblegum, 10%);
 			border-color: darken($bgBubblegum, 20%);
 		}
@@ -1020,7 +1107,7 @@ footer {
 	}
 	&.bg-crimson {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgCrimson, 10%);
 			border-color: darken($bgCrimson, 20%);
 		}
@@ -1031,7 +1118,7 @@ footer {
 	}
 	&.bg-greenbgGreen {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgGreen, 10%);
 			border-color: darken($bgGreen, 20%);
 		}
@@ -1042,7 +1129,7 @@ footer {
 	}
 	&.bg-ocean {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgOcean, 10%);
 			border-color: darken($bgOcean, 20%);
 		}
@@ -1053,7 +1140,7 @@ footer {
 	}
 	&.bg-purple {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgPurple, 10%);
 			border-color: darken($bgPurple, 20%);
 		}
@@ -1064,7 +1151,7 @@ footer {
 	}
 	&.bg-sage {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgSage, 10%);
 			border-color: darken($bgSage, 20%);
 		}
@@ -1075,7 +1162,7 @@ footer {
 	}
 	&.bg-sand {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgSand, 10%);
 			border-color: darken($bgSand, 20%);
 		}
@@ -1086,7 +1173,7 @@ footer {
 	}
 	&.bg-white {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: darken(#FFF, 10%);
 			border-color: darken(#FFF, 20%);
 		}
@@ -1097,7 +1184,7 @@ footer {
 	}	
 	&.bg-yellow {
 		address,
-		.w-calendar {
+		.w-footer-widget {
 			background-color: lighten($bgYellow, 10%);
 			border-color: darken($bgYellow, 20%);
 		}
@@ -1195,7 +1282,7 @@ footer {
 	}
 }
 
-.w-calendar {
+.w-footer-widget {
 	border: 2px dashed;
 	display: inline-block;
 	padding: 20px;
