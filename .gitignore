@@ -1,0 +1,8 @@
+### grunt ###
+# Dependency directories
+node_modules/
+
+# Single files 
+Gruntfile.js
+package-lock.json
+package.json
