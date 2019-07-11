@@ -21,6 +21,7 @@
 .grid-100,
 .grid-960,
 .grid-1160,
+.grid-1280,
 .grid-1440 { position: relative }
 
 /** GLOBAL GRID SIZES **/
@@ -54,6 +55,11 @@
 
 .grid-1160 {
 	max-width: 1160px;
+	@include center-block;
+}
+
+.grid-1280 {
+	max-width: 1280px;
 	@include center-block;
 }
 
@@ -151,7 +157,7 @@ header {
 p {
 	font-size:$base-font-size;
 	letter-spacing: 0.03em;
-	line-height: 1.3;
+	line-height: 1.3em;
 }
 		
 h1 {
@@ -412,45 +418,59 @@ ol {
 /* ##########################################################################
  ################################# Text colors ################################ */
 .text-light-blue {
+	border-color: lighten($textArctic, 20%);
 	color: $textArctic;
 }
 .text-black {
+	border-color: lighten($textBlack, 20%);
 	color: $textBlack;
 }
 .text-blue {
+	border-color: lighten($textBlue, 20%);
 	color: $textBlue;
 }
 .text-butterscotch-yellow {
+	border-color: lighten($textButterscotch, 20%);
 	color: $textButterscotch;
 }
 .text-charcoal {
+	border-color: lighten($textCharcoal, 20%);
 	color: $textCharcoal;
 }
 .text-egg-nog {
+	border-color: lighten($textEggNog, 20%);
 	color: $textEggNog;
 }
 .text-fossil-grey {
+	border-color: lighten($textFossilGrey, 20%);
 	color: $textFossilGrey;
 }
 .text-mauve {
+	border-color: lighten($textMauve, 20%);
 	color: $textMauve;
 }
 .text-ocean-green {
+	border-color: lighten($textOceanGreen, 20%);
 	color: $textOceanGreen;
 }
 .text-peanut {
+	border-color: lighten($textPeanut, 20%);
 	color: $textPeanut;
 }
 .text-red {
+	border-color: lighten($textRed, 20%);
 	color: $textRed;
 }
 .text-salmon {
+	border-color: lighten($textSalmon, 20%);
 	color: $textSalmon;
 }
 .text-shadow-grey {
+	border-color: lighten($textShadowGrey, 20%);
 	color: $textShadowGrey;
 }
 .text-teal {
+	border-color: lighten($textTeal, 20%);
 	color: $textTeal;
 }
 .text-white {

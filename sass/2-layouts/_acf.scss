@@ -9,10 +9,11 @@
 }
 
 .section-subtitle {
-	font-size: 33px;
+	font-size: 30px;
 	font-weight: 300;
 	letter-spacing: 0.03em;
-	line-height: 1.3em;
+	line-height: 1.4em;
+	margin-top: 20px;
 }
 
 .section-description {
@@ -22,21 +23,46 @@
 	width: 50%;
 }
 
+.title-align-center {
+	text-align: center;
+}
+
+.title-align-left {
+	text-align: left;
+}
+
 .acf-block {
 	margin: 0 auto 50px;
 }
 
+@include desktop {
+	.section-title {
+		padding: 0 20px;
+	}
+}
 @include tablet {
 	.section-title {
 		font-size: 36px;
 		margin-bottom: 17px;
-		padding: 0 20px;
+		padding: 30px 20px;
 	}
 	.section-subtitle {
 		padding: 0 20px;
 	}
 }
 @include mobile {
+	.section-title {
+		font-size: 30px;
+		margin-bottom: 30px;
+		padding: 30px 0;
+	}
+
+	.landing-page {
+		.section-title {
+			padding: 0 20px;
+		}	
+	}
+
 	.section-subtitle {
 		font-size: 1.8em;
 		line-height: 1.1em;
@@ -418,17 +444,16 @@
 		> li {
 			counter-increment: item;
 			letter-spacing: 0.02em;
-			line-height: 1.3em;
+			line-height: 1.7em;
 			list-style-type: none;
 			margin-bottom: 20px;
 			padding-left: 2em;
-			text-indent: -1.2em;
+			text-indent: -1.3em;
 
 			&::before {
 				content: counter(item) ".";
 				display: inline-block;
 				font-size: 1.1em;
-				font-weight: bold;
 				padding-right: 0.5em;
 				text-align: right;
 				width: 1em;
@@ -464,9 +489,10 @@
 		.paragraph,
 		.paragraph-2 {
 			h2 {
-				font-size: 38px;
+				font-size: 30px;
 				font-weight: 300;
-				line-height:1.3;
+				line-height: 1.4;
+				padding-bottom: 25px;
 				padding-top: 0;
 			}
 		}
@@ -484,8 +510,8 @@
 			.paragraph,
 			.paragraph-2 {
 				p {
-					font-size: 20px;
-					line-height: 30px;
+					font-size: 18px;
+					line-height: 1.4;
 				}
 			}
 		}
@@ -534,6 +560,29 @@
 			.paragraph-2 {
 				margin-top: 30px;
 				padding: 10px;
+			}
+
+			.paragraph,
+			.paragraph-2 {
+				padding: 15px;
+
+				h2 {
+					font-size: 30px;
+					padding-bottom: 25px;
+				}
+			}
+		}
+	}
+	.home,
+	.unsere {
+		.acf-paragraph-image {
+			.text-image-element {
+				.paragraph,
+				.paragraph-2 {
+					p {
+						font-size: 17px;
+					}
+				}
 			}
 		}
 	}
@@ -633,6 +682,40 @@
 		}
 	}
 }
+.acf-table-mobile {
+	display: none;
+
+	.acf-table-mobile-row {
+		margin-bottom:20px;
+
+		.mobile__tr {
+			border: 1px solid #C2C2C2;
+			border-bottom: 0;
+			display:flex;
+			flex-wrap:wrap;
+			width:100%;
+
+			&:last-of-type {
+				border-bottom: 1px solid #C2C2C2;
+			}
+		}
+
+		.fls-table-mobile-head-td {
+			border-right: 1px solid #C2C2C2;
+			font-weight: 400;
+			line-height: 1.3;
+			padding: 8px 5px;
+			width: 50%;
+		}
+
+		.fls-table-mobile-body-td {
+			font-weight: 300;
+			line-height: 1.3;
+			padding: 8px 5px;
+			width: 50%;
+		}
+	}
+}
 @include tablet {
 	.acf-table {
 		padding: 0 20px;
@@ -691,6 +774,12 @@
 				}
 			}
 		}
+	}
+	.acf-table-mobile {
+		display: block;
+	}
+	.acf-table-desktop {
+		display: none;
 	}
 }
 
@@ -880,6 +969,45 @@
 }
 
 
+.acf-three-images {
+	figure {
+		display: inline-block;
+		margin-right: 4%;
+		vertical-align: top;
+		width: 30%;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+@include mobile {
+	.acf-three-images {
+		figure {
+			width: 29%;
+		}
+	}
+}
+
+
+.acf-two-images {
+	figure {
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+		&:first-of-type {
+			margin-right: 3%;
+		}
+	}
+}
+@include mobile {
+	.acf-two-images {
+		figure {
+			width: 47%;
+		}
+	}
+}
+
+
 .acf-two-column-text {
 	> div {
 		&:nth-of-type(1) {
@@ -919,7 +1047,7 @@
 
 		li {
 			letter-spacing: 0.02em;
-			line-height: 1.3em;
+			line-height: 1.8em;
 			list-style-type: none;
 			margin-bottom: 20px;
 			padding-left: 2em;

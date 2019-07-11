@@ -1,8 +1,10 @@
 .mainNav {
 	/* Positioning */
+	left: 0;
+	margin: auto;
 	position: absolute;
+	right: 0;
 	top: 5%;
-	right: 5%;
 
 	nav {
 		li {
@@ -31,6 +33,15 @@
 	}
 }
 
+.home {
+	.mainNav {
+		left: auto;
+		position: absolute;
+		right: 5%;
+		top: 5%;
+	}
+}
+
 
 // Sticky Main Navigation
 
@@ -48,6 +59,11 @@
 	width: 100%;
 	z-index: 999;
 	@include trans(0.2s ease-in-out);
+
+	ul {
+		background: #fff;
+		display: block;
+	}
 
 	li {
 		display: inline-block;
@@ -202,6 +218,10 @@
 			}
 		}
 	}
+
+	.desktopHome {
+		display: none;
+	}
 }
 
 .is-sticky {
@@ -209,7 +229,33 @@
 	opacity: 1;
 }
 
- //Secondary Navigation
+.home {
+	.is-sticky {
+		.mainNav {
+			position: static;
+
+			ul {
+				li {
+					a {
+						color: #333;
+					}
+
+					&:hover {
+						ul {
+							li {
+								a {
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Secondary Navigation
 
 .secondaryNav {
 	/* Display & Box Model */ 
@@ -334,6 +380,10 @@
 	.stickyMenu.is-sticky,
 	.mainNav {
 		display: none;
+	}
+
+	.desktopHome {
+		display: block;
 	}
 }
 @include laptop {

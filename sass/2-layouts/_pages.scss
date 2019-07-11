@@ -12,18 +12,11 @@
 header.home {
 	height:100%;
 }
-header.other-header {
-	padding-bottom: 170px;
-}
-@include desktop {
-	header.other-header {
-		padding-bottom: 70px;
-	}
-}
 
 .logo {
 	img {
-		max-width: 200px;
+		max-width: 65%;
+		width: 300px;
 	}
 }
 
@@ -93,18 +86,28 @@ header.other-header {
 }
 
 .pipe {
+	font-weight: 300;
 	padding: 0 7px;
 }
 
 .page-content-wrap {
-	padding: 50px 0;
+	padding: 250px 0 100px 0;
 	width: 100%;
 }
 @include tablet {
 	.page-content-wrap {
 		margin: 0 auto;
-		padding: 30px 0;
+		padding: 55px 25px;
 	}
+}
+
+a.content-link {
+	color: #0072BC;
+	font-weight: bold;
+}
+a.content-link:hover {
+	color: #5998D5;
+	text-decoration: underline;
 }
 
 /* 1. Section one / Paragraph and image
@@ -112,6 +115,14 @@ header.other-header {
 
 .section-one {
 	margin: 100px 0;
+	.paragraph {
+		p {
+			span {
+				color: #484848;
+				font-size: 17px;
+			}
+		}
+	}
 }
 @include laptop {
 	.section-one {
@@ -283,7 +294,13 @@ header.other-header {
 
 				+span {
 					font-size:12px;
+					font-weight: 300;
+					letter-spacing: 0.1em;
 					margin-left: 10px;
+				}
+
+				img {
+					width: 16px;
 				}
 			}
 		}
@@ -292,12 +309,15 @@ header.other-header {
 			padding: 25px;
 		}
 		p { 
-			padding-top: 20px;
+			font-size: 15px;
+			line-height: 1.4;
+			padding-top: 15px;
 		}
 		.newsCategory {
 			display: block;
 			font-size: 14px;
-			margin-top: 5px;
+			letter-spacing: 0.01em;
+			margin-top: 10px;
 		
 			a {
 
@@ -389,17 +409,17 @@ header.other-header {
 	========================================================================== */
 
 .single-article {
-	margin-bottom: 60px;
+	margin-bottom: 80px;
 
 	.article-header {
 		margin-bottom: 30px;
 
 		h3 {
-			font-size: 36px;
-			font-weight: 400;
+			font-size: 32px;
+			font-weight: 300;
 			letter-spacing: 0.03em;
-			line-height: 1.2em;
-			margin-bottom: 10px;
+			line-height: 1.5em;
+			margin-bottom: 15px;
 		}
 
 		.article-info {
@@ -415,7 +435,9 @@ header.other-header {
 	}
 
 	p {
-		margin: 30px 0 40px;
+		margin: 30px 0 10px;
+		font-size: 16px;
+		line-height: 1.7;
 	}
 }
 
@@ -467,6 +489,7 @@ header.other-header {
 		}
 
 		p {
+			font-size: 15px;
 			margin: 20px 0;
 		}
 	}
@@ -541,7 +564,7 @@ header.other-header {
 			a {
 				display: inline-block;
 				line-height: 1.5em;
-				padding: 10px 0;
+				padding: 15px 0;
 			}
 		}
 	}
@@ -562,6 +585,17 @@ ul.wpp-list {
 
 			.wpp-thumbnail {
 				margin-right: 10px;
+			}
+		}
+	}
+}
+@include mobile {
+	ul.wpp-list {
+		li {
+			a {
+				&:nth-of-type(2) {
+					padding: 12px 0px 12px 15px;
+				}
 			}
 		}
 	}
@@ -619,6 +653,10 @@ ul.wpp-list {
 				color: inherit;
 				text-decoration: underline;
 			}
+
+			&.dots {
+				color: $linkColor;
+			}
 		}
 	}
 	span {
@@ -638,7 +676,7 @@ ul.wpp-list {
 	}
 
 	div {
-		max-width: 50%;
+		max-width: 47%;
 
 		a {
 			&:hover {
@@ -646,21 +684,26 @@ ul.wpp-list {
 				text-decoration: underline;
 			}
 		}
-	}
-}
-@include laptop {
-	.aktuelles {
-		margin-right: 10%;
 
-		&.grid-55 {
-			width: 60%;
+		&.next,
+		&.prev {
+			a {
+				font-size: 14px;
+				font-weight: normal;
+				letter-spacing: 0.02em;
+				line-height: 1.5;
+			}
 		}
 	}
 }
-@include tablet {
+@include mediumDesktop {
 	.blog-wrap {
 		padding-left: 0;
 		padding-right: 0;
+
+		.blog {
+			padding: 0 25px;
+		}
 	}
 
 	.aktuelles {
@@ -669,7 +712,10 @@ ul.wpp-list {
 		margin-right: 0;
 
 		&.grid-55 {
+			display: block;
+			margin: 0 auto;
 			width: 100%;
+			width: 65%;
 		}
 	}
 
@@ -677,14 +723,32 @@ ul.wpp-list {
 		float: none;
 
 		&.grid-30 {
+			display: block;
 			margin: 0 auto;
-			width: 70%;
+			width: 50%;
 		}
 	}
 
 	.sidebar-widget {
 		.sidebar-subtitle {
 			margin-bottom: 15px;
+		}
+	}
+
+	.content-pagination {
+		margin-bottom: 50px;
+	}
+}
+@include tablet {
+	.aktuelles {
+		&.grid-55 {
+			width: 100%;
+		}
+	}
+
+	.right-sidebar {
+		&.grid-30 {
+			width: 70%;
 		}
 	}
 }
@@ -704,8 +768,9 @@ ul.wpp-list {
 
 				a {
 					display: inline-block;
+					font-size: 15px;
 					line-height: 1.5em;
-					padding: 5px 0;
+					padding: 12px 0px;
 				}
 			}
 		}
@@ -894,9 +959,11 @@ ul.wpp-list {
 	}
 
 	p {
-		font-size: 14px;
+		color: $base-font-color;
+		font-size: 17px;
 		line-height: 1.5em;
 		margin: 0 auto 8px;
+		padding: 0;
 		width: 90%;
 
 		&.contact-info-title {
@@ -923,10 +990,36 @@ ul.wpp-list {
 		margin: 50px auto;
 
 		.table-cell {
-			border-right: 1px solid $textFossilGrey;
+			border-right: 1px solid;
 
 			&:last-of-type {
 				border: none;
+			}
+		}
+	}
+}
+.kontakt {
+	&.nav-article {
+		.table {
+			display: block;
+
+			.table-cell {
+				border: none;
+				border-bottom: 1px solid;
+				display: inline-block;
+				margin: 10px 0;
+				min-height: 100px;
+				padding: 10px 0;
+				vertical-align: top;
+				width: 60%;
+
+				&:nth-of-type(2n) {
+					border-bottom: 1px solid;
+				}
+
+				&:last-of-type {
+					border: none;
+				}
 			}
 		}
 	}
@@ -938,7 +1031,7 @@ ul.wpp-list {
 
 			.table-cell {
 				border: none;
-				border-bottom: 1px solid $textFossilGrey;
+				border-bottom: 1px solid;
 				display: inline-block;
 				margin: 10px 0;
 				min-height: 100px;
@@ -947,7 +1040,7 @@ ul.wpp-list {
 				width: 60%;
 
 				&:nth-of-type(2n) {
-					border-bottom: 1px solid $textFossilGrey;
+					border-bottom: 1px solid;
 				}
 
 				&:last-of-type {
@@ -970,8 +1063,48 @@ ul.wpp-list {
 
 
 
-  /* 10. Impressum
-   ========================================================================== */
+/* 10. Intranet
+	========================================================================== */
+
+.intranet-wrap {
+	.intranet-article {
+		h3 {
+			padding-bottom: 0;
+		}
+
+		section {
+			padding: 15px 0;
+		}
+
+		.acf-file {
+		    margin: 10px 20px;
+
+		    .file-info {
+		    	h4 {
+			    	span {
+			    		font-size: 15px;
+						padding-left: 10px;
+			    	}
+			    }
+		    }
+		}
+
+		hr {
+			&.intranet-horizontal-line {
+				background: #333;
+				background-image: linear-gradient(to right, #444, #999, #eee);
+				border: 0;
+				height: 1px;
+			}
+		}
+	}
+}
+
+
+
+
+/* 11. Impressum
+	========================================================================== */
 
 .law-page {
 	padding-bottom: 100px;
@@ -982,10 +1115,12 @@ ul.wpp-list {
 	}
 
 	h2 {
-		font-size: 20px;
-		font-weight: 600;
-		margin: 50px 0;
-		padding: 0;
+		font-size: 30px;
+		font-weight: 300;
+		letter-spacing: 0.03em;
+		line-height: 1.7em;
+		margin:0;
+		padding: 0 0 20px 0;
 	}
 
 	h3 {
@@ -1047,6 +1182,15 @@ ul.wpp-list {
 		}
 	}
 }
+@include laptop {
+	.error-404-heading {
+		font-size: 50px;
+
+		span {
+			font-size: 28px;
+		}
+	}
+}
 
 
 
@@ -1066,6 +1210,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgApricot, 10%);
 			border-color: darken($bgApricot, 20%);
+			outline: 5px solid lighten($bgApricot, 10%);
 		}
 		.copy {
 			background-color: darken($bgApricot, 30%);
@@ -1077,6 +1222,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgBlack, 10%);
 			border-color: darken($bgBlack, 20%);
+			outline: 5px solid lighten($bgBlack, 10%);
 		}
 		.copy {
 			background-color: darken($bgBlack, 30%);
@@ -1088,6 +1234,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgBlue, 10%);
 			border-color: darken($bgBlue, 20%);
+			outline: 5px solid lighten($bgBlue, 10%);
 		}
 		.copy {
 			background-color: darken($bgBlue, 30%);
@@ -1099,6 +1246,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgBubblegum, 10%);
 			border-color: darken($bgBubblegum, 20%);
+			outline: 5px solid lighten($bgBubblegum, 10%);
 		}
 		.copy {
 			background-color: darken($bgBubblegum, 30%);
@@ -1110,20 +1258,22 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgCrimson, 10%);
 			border-color: darken($bgCrimson, 20%);
+			outline: 5px solid lighten($bgCrimson, 10%);
 		}
 		.copy {
 			background-color: darken($bgCrimson, 30%);
 			color: $bgCrimson;
 		}
 	}
-	&.bg-greenbgGreen {
+	&.bg-green {
 		address,
 		.w-footer-widget {
 			background-color: lighten($bgGreen, 10%);
 			border-color: darken($bgGreen, 20%);
+			outline: 5px solid lighten($bgGreen, 10%);
 		}
 		.copy {
-			background-color: darken($bgGreen, 30%);
+			background-color: darken($bgGreen, 20%);
 			color: $bgGreen;
 		}
 	}
@@ -1132,6 +1282,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgOcean, 10%);
 			border-color: darken($bgOcean, 20%);
+			outline: 5px solid lighten($bgOcean, 10%);
 		}
 		.copy {
 			background-color: darken($bgOcean, 30%);
@@ -1143,6 +1294,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgPurple, 10%);
 			border-color: darken($bgPurple, 20%);
+			outline: 5px solid lighten($bgPurple, 10%);
 		}
 		.copy {
 			background-color: darken($bgPurple, 30%);
@@ -1154,6 +1306,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgSage, 10%);
 			border-color: darken($bgSage, 20%);
+			outline: 5px solid lighten($bgSage, 10%);
 		}
 		.copy {
 			background-color: darken($bgSage, 30%);
@@ -1165,6 +1318,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgSand, 10%);
 			border-color: darken($bgSand, 20%);
+			outline: 5px solid lighten($bgSand, 10%);
 		}
 		.copy {
 			background-color: darken($bgSand, 30%);
@@ -1176,6 +1330,7 @@ footer {
 		.w-footer-widget {
 			background-color: darken(#FFF, 10%);
 			border-color: darken(#FFF, 20%);
+			outline: 5px solid darken(#FFF, 10%);
 		}
 		.copy {
 			background-color: darken(#FFF, 30%);
@@ -1187,6 +1342,7 @@ footer {
 		.w-footer-widget {
 			background-color: lighten($bgYellow, 10%);
 			border-color: darken($bgYellow, 20%);
+			outline: 5px solid lighten($bgYellow, 10%);
 		}
 		.copy {
 			background-color: darken($bgYellow, 30%);
@@ -1232,7 +1388,7 @@ footer {
 	}
 
 	.copy {
-		margin-top: 40px;
+		/*margin-top: 40px;*/
 		padding: 20px;
 
 		small {
@@ -1282,6 +1438,16 @@ footer {
 	}
 }
 
+.intranet-menu {
+	ul {
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			padding: 5px;
+		}
+	}
+}
+
 .w-footer-widget {
 	border: 2px dashed;
 	display: inline-block;
@@ -1291,6 +1457,21 @@ footer {
 		margin: 0 auto;
 	}
 }
+
+.goTotop {
+	bottom: 25px;
+	cursor: pointer;
+	opacity: 0;
+	position: fixed;
+	right: 20px;
+	transition: 0.5s;
+	visibility: hidden;
+	z-index: 999999;
+	.im {
+		font-size: 50px;
+	}
+}
+
 @include laptop {
 	footer {
 		.footer-column {
